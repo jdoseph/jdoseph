@@ -1,38 +1,541 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+body{
+  font-family: "Expletus Sans", serif !important;
+}
+
+.experience-section{
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px 10px 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Expletus Sans", serif;
+}
+
+.experience-section h2 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.experience-content {
+  opacity: 0;
+  flex: 1;
+}
+
+.experience-logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.software-engineer-logo,
+.student-technician-logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 300px;
+  opacity: 0;
+}
+
+.software-engineer-border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: #000000;
+  width: 0;
+}
+
+.student-technician-border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000000;
+  width: 0;
+  transform-origin: right;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.experience-image {
+  width: 220px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.experience-item h3 {
+  font-size: 1.5em;
+  color: #000000;
+}
+
+.experience-item h4 {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.experience-item p {
+  font-size: 1em;
+  color: #777;
+}
+
+.experience-item ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.experience-item ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .experience-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+  }
+
+  .experience-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%; /* Adjust width to fit mobile view */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .experience-content {
+    align-items: center;
+  }
+
+  .experience-item ul li {
+    justify-content: center;
+  }
+
+  .about-text{
+    font-size: 2em !important;
+  }
+
+  .about-image {
+    width: 100%; /* Adjust width to fit mobile view */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.projects-section {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px 10px;
+  position: relative;
+}
+
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #000000;
+}
+
+.card {
+  opacity: 0;
+}
+
+.skills-section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 20px 10px 100px 10px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Expletus Sans", serif;
+}
+
+.skills-section h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: #030303;
+}
+
+.skills-section h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #555;
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-icons a {
+  color: inherit; /* Ensure the icon color is inherited */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 2em;
+  color: #000000;
+}
+
+.skills-icons a:hover {
+  color: #c4d0dd; /* Change color on hover */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text{
+  flex-grow: 1;
+}
+
+.card-button{
+  color: #000000 !important;
+  background-color: #f4f4f4 !important;
+  border-color: #f4f4f4 !important;
+  align-self: flex-start;
+}
+
+.card-button:hover{
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.contact-section {
+  background: url('/public/images/pickleballBackgroundRemoved.png') no-repeat center center/cover;
+  padding: 100px 50px;
+  margin: 20px 10px 20px 10px;
+  color: #000000;
+  border-radius: 15px;
+  font-family: "Expletus Sans", serif;
+  position: relative;
+}
+
+.contact-section h1 {
+  margin-bottom: 30px;
+  font-size: 4em;
+  color: #000000;
+  position: relative;
+  text-align: center;
+  top: -200px;
+}
+
+.contact-icons {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.contact-icons a {
+  color: inherit; 
+  text-decoration: none; 
+  font-size: 3em;
+  position: absolute;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #c4d0dd ;
+  transform: scale(1.2);
+}
+
+#contact-instagram {
+  left: -30px;
+  top: 0px;
+}
+
+#contact-github {
+  right: 400px;
+  top: -100px;
+}
+
+#contact-linkedin {
+  left: 350px;
+  bottom: 50px;
+}
+
+#contact-email {
+  right: 350px;
+  bottom: 50px;
+}
+
+@media (max-width:1920px){
+  #contact-instagram {
+    left: 0px;
+    top: 0px;
+  }
+
+  #contact-github {
+    right: 500px;
+    top: -120px;
+  }
+
+  #contact-linkedin {
+    left: 400px;
+    bottom: 40px;
+  }
+
+  #contact-email {
+    right: 540px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    padding: 50px 20px;
+  }
+  .contact-section h1 {
+    font-size: 2em;
+    bottom: 10px;
+  }
+
+  .contact-icons {
+    height: 200px;
+    width: 100%;
+  }
+
+  #contact-instagram {
+    left: 0px;
+    top: 0px;
+  }
+
+  #contact-github {
+    right: 120px;
+    top: -20px;
+  }
+
+  #contact-linkedin {
+    left: 20px;
+    bottom: 40px;
+  }
+
+  #contact-email {
+    right: 60px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 0px 0px;
+  }
+
+  .contact-section h1 {
+    font-size: 2em;
+    text-align: center;
+    top: -100px;
+  }
+
+  .contact-icons a {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Bootstrap xs */
+
+  .contact-section h1{
+    top: -100px;
+  }
+
+  #contact-instagram {
+    left: 0px;
+    top: 0px;
+  }
+
+  #contact-github {
+    right: 40px;
+    top: -10px;
+  }
+
+  #contact-linkedin {
+    left: 20px;
+    bottom: 40px;
+  }
+
+  #contact-email {
+    right: 30px;
+    bottom: 60px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Bootstrap sm */
+
+  .contact-section h1{
+    top: -100px;
+  }
+
+  #contact-instagram {
+    left: 0px;
+    top: -40px;
+  }
+
+  #contact-github {
+    right: 200px;
+    top: -45px;
+  }
+
+  #contact-linkedin {
+    left: 30px;
+    bottom: 60px;
+  }
+
+  #contact-email {
+    right: 200px;
+    bottom: 80px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Bootstrap md */
+  #contact-instagram {
+    left: 0px;
+    top: -50px;
+  }
+
+  #contact-github {
+    right: 200px;
+    top: -60px;
+  }
+
+  #contact-linkedin {
+    left: 130px;
+    bottom: 120px;
+  }
+
+  #contact-email {
+    right: 200px;
+    bottom: 130px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Bootstrap lg */
+  #contact-instagram {
+    left: 10px;
+    top: -70px;
+  }
+
+  #contact-github {
+    right: 100px;
+    top: -75px;
+  }
+
+  #contact-linkedin {
+    left: 200px;
+    bottom: 80px;
+  }
+
+  #contact-email {
+    right: 280px;
+    bottom: 160px;
+  }
+}
+
+@media (min-width: 1201px) {
+  /* Bootstrap xl */
+  #contact-instagram {
+    left: 0px;
+    top: 0px;
+  }
+
+  #contact-github {
+    right: 550px;
+    top: -90px;
+  }
+
+  #contact-linkedin {
+    left: 500px;
+    bottom: 100px;
+  }
+
+  #contact-email {
+    right: 600px;
+    bottom: 100px;
+  }
+}
+
+.logo-image{
+  height: 70px;
+  width: auto;
+}
+
+.about-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  margin: 20px 0 20px 0;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Expletus Sans", serif;
+  display: flex;
+  flex-direction: column;
+  font-family: "Expletus Sans", serif;
+  height: 50vh;
+  clear: both;
 }
 
-.App-link {
-  color: #61dafb;
+.about-image {
+  width: 300px; 
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-text {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.about-text span {
+  display: none;
+  opacity: 0;
+}
+
+.jd-svg {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
