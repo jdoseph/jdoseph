@@ -1,122 +1,104 @@
-import React, { useEffect } from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
-import anime from 'animejs';
+import React, { useState } from 'react';
+import { FaClock, FaPlay } from 'react-icons/fa';
 
 const Experience = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      const experienceSection = document.getElementById('experience');
-      const experienceSectionTop = experienceSection.getBoundingClientRect().top + window.scrollY;
-      const experienceSectionHeight = experienceSection.offsetHeight;
-      const windowHeight = window.innerHeight;
-
-      if (window.scrollY >= experienceSectionTop - windowHeight + 500 && window.scrollY < experienceSectionTop + experienceSectionHeight) {
-        // Animate the logo for the Software Engineer section
-        anime({
-          targets: '.software-engineer-logo',
-          translateX: ['-100%', '100%'],
-          opacity: [0, 1],
-          rotate: '1turn',
-          easing: 'easeInOutQuad',
-          duration: 3000,
-          loop: false,
-          direction: 'normal',
-          complete: function() {
-            // Animate the border after the logo animation completes
-            anime({
-              targets: '.software-engineer-border',
-              width: ['0%', '100%'],
-              easing: 'easeInOutQuad',
-              duration: 1000,
-              complete: function() {
-                // Fade in the content after the border animation completes
-                anime({
-                  targets: '.software-engineer-content',
-                  opacity: [0, 1],
-                  duration: 2000,
-                  easing: 'easeInOutQuad'
-                });
-              }
-            });
-          }
-        });
-
-        // Animate the logo for the Student Technician section
-        anime({
-          targets: '.student-technician-logo',
-          translateX: ['100%', '-100%'],
-          rotate: '1turn',
-          opacity: [0, 1],
-          easing: 'easeInOutQuad',
-          duration: 3000,
-          loop: false,
-          direction: 'normal',
-          complete: function() {
-            // Animate the border after the logo animation completes
-            anime({
-              targets: '.student-technician-border',
-              width: ['0%', '100%'],
-              easing: 'easeInOutQuad',
-              duration: 1000,
-              complete: function() {
-                // Fade in the content after the border animation completes
-                anime({
-                  targets: '.student-technician-content',
-                  opacity: [0, 1],
-                  duration: 2000,
-                  easing: 'easeInOutQuad'
-                });
-              }
-            });
-          }
-        });
-
-        // Remove the scroll event listener after the animation is triggered
-        window.removeEventListener('scroll', handleScroll);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const [expandedExperience, setExpandedExperience] = useState(null);
+  
+  const getShortDuration = (duration) => {
+    const parts = duration.split(' – ');
+    if (parts.length > 1) {
+      const endPart = parts[1];
+      if (endPart === 'Present') return 'Present';
+      if (endPart.includes('2021')) return '2021';
+      return endPart;
+    }
+    return duration;
+  };
+  
+  const experienceTracks = [
+    {
+      company: "USAF DoD",
+      role: "Software Engineer", 
+      location: "Robins AFB, GA",
+      duration: "July 2024 – Present",
+      logo: "/images/dod.png",
+      highlights: [
+        "Worked under the 402d Software Directorate at the Robins AFB",
+        "Developed and maintained full-stack web applications using Blazor and C# .NET frameworks",
+        "Architected and managed cloud-based data infrastructure for efficient dataset management",
+        "Improved application efficiency by 15% through optimized software architecture",
+        "Developed comprehensive software documentation ensuring compliance with Department of Defense standards"
+      ]
+    },
+    {
+      company: "Georgia Southern University",
+      role: "Student Technician",
+      location: "Savannah, GA", 
+      duration: "August 2020 – December 2021",
+      logo: "/images/Georgia_Southern_Eagles_logo.svg.png",
+      highlights: [
+        "Automated lab computer software checks using PowerShell, enhancing IT compliance",
+        "Reduced manual workload by 30% through automated system monitoring solutions",
+        "Delivered IT maintenance and technical support with 90% first-contact resolution rate", 
+        "Maintained 99% uptime across institutional systems through proactive troubleshooting"
+      ]
+    }
+  ];
 
   return (
-    <div className="experience-section" id="experience">
-      <h2><strong>experience</strong></h2>
-      <div className="experience-item">
-        <div className="experience-logo-container">
-          <img src="/images/JD.svg" alt="Logo" className="software-engineer-logo" />
-          <div className="software-engineer-border"></div>
+    <div className="experience-section">
+      <div className="experience-tracklist">
+        <div className="tracklist-header">
+          <div className="header-number">#</div>
+          <div className="header-title">Title</div>
+          <div className="header-album">Album</div>
+          <div className="header-duration"><FaClock size={16} /></div>
         </div>
-        <div className="experience-content software-engineer-content">
-          <h3>software engineer</h3>
-          <h4>402d Software Engineering Group (SWEG), Robins AFB</h4>
-          <p>July 2024 – Present | Warner Robins, GA</p>
-          <ul>
-            <li><FaCheckCircle /> Architected and managed cloud-based data infrastructure for efficient dataset management.</li>
-            <li><FaCheckCircle /> Collaborated in the design and implementation of software architecture using Agile methodologies.</li>
-            <li><FaCheckCircle /> Designed and implemented USAF applications using Blazor, C# .NET frameworks and MongoDB, improving application efficiency by 15%.</li>
-            <li><FaCheckCircle /> Developed comprehensive software documentation ensuring compliance with DoD standards and enhancing software lifecycle management.</li>
-          </ul>
-        </div>
-      </div>
-      <div className="experience-item">
-        <div className="experience-logo-container">
-          <img src="/images/JD.svg" alt="Logo" className="student-technician-logo" />
-          <div className="student-technician-border"></div>
-        </div>
-        <div className="experience-content student-technician-content">
-          <h3>student technician (IT Support Automation)</h3>
-          <h4>Georgia Southern University</h4>
-          <p>August 2020 – December 2021 | Savannah, GA</p>
-          <ul>
-            <li><FaCheckCircle /> Automated lab computer software checks using PowerShell, enhancing IT compliance and reducing manual workload by 30%.</li>
-            <li><FaCheckCircle /> Delivered IT maintenance and technical support, improving user satisfaction by resolving 90% of issues on first contact.</li>
-            <li><FaCheckCircle /> Diagnosed and implemented solutions for hardware and software issues, maintaining 99% uptime across institutional systems.</li>
-          </ul>
+        
+        <div className="experience-tracks">
+          {experienceTracks.map((experience, index) => (
+            <div key={index}>
+              <div 
+                className={`experience-track ${expandedExperience === index ? 'expanded' : ''}`}
+                onClick={() => setExpandedExperience(expandedExperience === index ? null : index)}
+              >
+                <div className="track-number">
+                  <span className="track-num">{index + 1}</span>
+                  <FaPlay className="play-icon" />
+                </div>
+                <div className="track-info">
+                  <div className="track-icon">
+                    <img src={experience.logo} alt={experience.company} className="experience-logo" />
+                  </div>
+                  <div className="track-details">
+                    <div className="track-name">{experience.role}</div>
+                    <div className="track-artist desktop-location">{experience.location}</div>
+                  </div>
+                </div>
+                <div className="track-album desktop-company">{experience.company}</div>
+                <div className="track-duration desktop-duration">{experience.duration}</div>
+                <div className="track-duration mobile-short-duration">{getShortDuration(experience.duration)}</div>
+              </div>
+              {expandedExperience === index && (
+                <div className="experience-highlights">
+                  <div className="mobile-company">
+                    <strong>Company:</strong> {experience.company}
+                  </div>
+                  <div className="mobile-location">
+                    <strong>Location:</strong> {experience.location}
+                  </div>
+                  <div className="mobile-duration">
+                    <strong>Duration:</strong> {experience.duration}
+                  </div>
+                  <ul>
+                    {experience.highlights.map((highlight, highlightIndex) => (
+                      <li key={highlightIndex}>{highlight}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
