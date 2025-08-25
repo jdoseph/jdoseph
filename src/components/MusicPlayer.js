@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaVolumeUp, FaDesktop, FaListUl, FaHeart } from 'react-icons/fa';
+import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaVolumeUp, FaDesktop, FaListUl } from 'react-icons/fa';
 import { BiShuffle, BiRepeat } from 'react-icons/bi';
 import { FaComputer } from 'react-icons/fa6';
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(147); // 2:27
+  const [currentTime] = useState(147); // 2:27
   const [duration] = useState(210); // 3:30
 
   const formatTime = (seconds) => {
