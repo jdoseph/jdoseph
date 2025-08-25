@@ -153,9 +153,9 @@ const MainContent = () => {
           <button className="secondary-button">
             <FaShuffle />
           </button>
-          <button className="secondary-button">
-            <FaDownload />
-          </button>
+            <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="action-btn secondary">
+              <FaDownload />
+            </a>
         </div>
       </div>
       
