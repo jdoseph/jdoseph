@@ -63,7 +63,7 @@ const Sidebar = () => {
         
         <div className="sidebar-search-recents">
           <div className="search-recent-item">
-            <FaSearch size={16} color="var(--spotify-light-grey)" />
+            <FaSearch size={16} color="var(--spotify-white)" />
           </div>
           <div className="search-recent-item">
             <span>Recents</span>

@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: var(--spotify-font);
+  font-family: var(--spotify-font) !important;;
   background-color: var(--spotify-black);
   color: var(--spotify-white);
   overflow-x: hidden;
@@ -231,9 +231,8 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--spotify-light-grey);
+  color: var(--spotify-white);
   font-size: 14px;
-  color: var(--spotify-light-grey);
   font-weight: 400;
   cursor: pointer;
   padding: 8px 12px;
@@ -261,30 +260,30 @@ body {
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  padding: .25rem .25rem;
-  color: var(--spotify-light-grey);
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  gap: 12px;
+  display: flex !important; 
+  align-items: center !important;
+  padding: .25rem .25rem !important;
+  color: var(--spotify-white) !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  background: none !important;
+  border: none !important;
+  width: 100% !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  gap: 12px !important;
 }
 
 .nav-link:hover {
-  background-color: var(--spotify-grey);
+  background-color: var(--spotify-grey) !important;;
   color: var(--spotify-white);
 }
 
 .nav-link.active {
-  background-color: var(--spotify-grey);
+  background-color: var(--spotify-grey) !important;;
   color: var(--spotify-white);
 }
 
@@ -331,6 +330,11 @@ body {
 
 .mini-heart-container.contact-gradient {
   background: linear-gradient(135deg, #FFC107 0%, #FFD54F 50%, #FFFDE7 100%);
+}
+
+.nav-label-container {
+  flex: 1;
+  gap: 8px;
 }
 
 .nav-label {
@@ -537,13 +541,13 @@ body {
   padding: 12px 48px 12px 48px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--spotify-light-grey-black);
+  color: var(--spotify-light-grey);
   outline: none;
   transition: all 0.3s ease;
 }
 
 .search-input::placeholder {
-  color: var(--spotify-light-grey-black);
+  color: var(--spotify-light-grey);
 }
 
 .search-input:focus {
@@ -555,7 +559,7 @@ body {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--spotify-light-grey-black);
+  color: var(--spotify-light-grey);
   font-size: 16px;
   pointer-events: none;
 }
@@ -1245,6 +1249,7 @@ body {
 /* PROJECTS SECTION */
 .projects-section {
   background: transparent;
+  color: var(--spotify-white);
   padding: 0;
   margin: 0;
 }
