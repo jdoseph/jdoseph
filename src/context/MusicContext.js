@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer, useRef, useEffect } from 'react';
-import { musicLibrary, getTrackById, getNextTrack, getPreviousTrack, shufflePlaylist } from '../data/musicLibrary';
+import { musicLibrary, shufflePlaylist } from '../data/musicLibrary';
 
 const MusicContext = createContext();
 

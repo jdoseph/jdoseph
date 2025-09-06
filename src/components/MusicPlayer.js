@@ -1,7 +1,6 @@
 import React from 'react';
-import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaVolumeUp, FaDesktop, FaListUl, FaHeart } from 'react-icons/fa';
+import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaVolumeUp, FaListUl } from 'react-icons/fa';
 import { BiShuffle, BiRepeat } from 'react-icons/bi';
-import { FaComputer } from 'react-icons/fa6';
 import { useMusic } from '../context/MusicContext';
 import Queue from './Queue';
 

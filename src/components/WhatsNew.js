@@ -65,7 +65,7 @@ const WhatsNew = () => {
       <div className="whats-new-hero">
         <div className="hero-content">
           <div className="hero-icon">
-            <FaBell size={80} color="#1ed760" />
+            <FaBell size={80} color="#fff" />
           </div>
           <div className="hero-text">
             <h1 className="hero-title">What's New</h1>

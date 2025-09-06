@@ -17,13 +17,6 @@ const Queue = () => {
   const currentIndex = playlist.findIndex(track => track.id === currentTrack?.id);
   const nextTracks = currentIndex >= 0 ? playlist.slice(currentIndex + 1) : [];
 
-  const formatTime = (seconds) => {
-    if (!seconds || isNaN(seconds)) return '0:00';
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
-
   const handleTrackClick = (track) => {
     playTrack(track);
   };
