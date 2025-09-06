@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { FaHome, FaSearch, FaChevronLeft, FaChevronRight, FaBell, FaUserFriends } from 'react-icons/fa';
 import Sidebar from './components/Sidebar';
@@ -6,6 +6,12 @@ import MainContent from './components/MainContent';
 import MusicPlayer from './components/MusicPlayer';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('about');
+
+  const handleHomeClick = () => {
+    setActiveSection('about');
+  };
+
   return (
     <div className="spotify-app">
       <div className="search-header">
@@ -18,8 +24,8 @@ function App() {
           </button>
         </div>
         <div className="search-center">
-          <button className="home-icon-button">
-            <FaHome />
+          <button className="home-icon-button" onClick={handleHomeClick}>
+              <FaHome />
           </button>
           <div className="search-container">
             <FaSearch className="search-icon" />
@@ -43,8 +49,8 @@ function App() {
         </div>
       </div>
       <div className="app-body">
-        <Sidebar />
-        <MainContent />
+        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+        <MainContent activeSection={activeSection} setActiveSection={setActiveSection} />
       </div>
       <MusicPlayer />
     </div>

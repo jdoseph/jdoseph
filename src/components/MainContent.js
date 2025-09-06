@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FaPlay, FaShuffle, FaDownload } from 'react-icons/fa6';
 import { FaCode, FaCogs, FaEnvelope, FaHeart } from 'react-icons/fa';
 import About from './About';
@@ -7,24 +7,7 @@ import Projects from './Projects';
 import Skills from './Skills';
 import Contacts from './Contacts';
 
-const MainContent = () => {
-  const [activeSection, setActiveSection] = useState('about');
-
-  useEffect(() => {
-    const handleNavClick = (e) => {
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-          const section = event.currentTarget.dataset.section;
-          if (section) {
-            setActiveSection(section);
-          }
-        });
-      });
-    };
-
-    handleNavClick();
-  }, []);
+const MainContent = ({ activeSection, setActiveSection }) => {
 
   const getHeaderInfo = () => {
     switch(activeSection) {

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { FaHome, FaHeart, FaCode, FaCogs, FaEnvelope, FaPlus, FaChevronRight, FaChevronLeft, FaSearch, FaBars, FaMapPin } from 'react-icons/fa';
 
-const Sidebar = () => {
-  const [activeSection, setActiveSection] = useState('about');
+const Sidebar = ({ activeSection, setActiveSection }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   
   const scrollChipsRight = () => {
