@@ -14,17 +14,17 @@ const About = () => {
             </button>
           </div>
         </div>
-        
+
         <div className="podcast-info">
           <div className="podcast-type">PODCAST</div>
           <h1 className="podcast-title">The Joseph Do Experience</h1>
           <p className="podcast-description">
             Hello! I'm Joseph Do, a software engineer passionate about technology, food, traveling
             and pickleball. Join me as I share insights from my career journey, discuss the news in my life
-            and hobbies! Whether you're a fellow developer or just curious and want to be friends, 
+            and hobbies! Whether you're a fellow developer or just curious and want to be friends,
             lets have a chat!
           </p>
-          
+
           <div className="podcast-meta">
             <img src="/images/pizza.png" alt="Host" className="host-avatar" />
             <div className="podcast-details">
@@ -34,7 +34,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="podcast-actions">
             <button className="action-btn primary">
               <FaPlay />
@@ -58,28 +58,29 @@ const About = () => {
         <div className="episodes-header">
           <h2>Latest Episodes</h2>
         </div>
-        
+
         <div className="episode-list">
-          <div className="episode-item">
+
+        <div className="episode-item">
             {/* Desktop version */}
             <div className="desktop-episode">
               <div className="episode-artwork">
-                <img src="/images/jdosephgraduation.png" alt="Episode" />
+                <img src="/images/pizza.png" alt="Episode" />
                 <button className="episode-play-btn">
                   <FaPlay />
                 </button>
               </div>
               <div className="episode-content">
-                <h3 className="episode-title"> UGA to DoD Software Engineering</h3>
+                <h3 className="episode-title">Weekend Trip To NYC</h3>
                 <p className="episode-description">
-                  In this episode, I graduated from the University of Georgia with a Bachelors of Science in
-                  Computer Science in May 2024. Post grad, I joined the United States Air Force as a Software Engineer. 
-                  I currently hold a secret clearance and work on various projects supporting national security.
+                  For Memorial Day 2025, I visited NYC with my friend John. Our main goal of the NYC trip was to
+                  hit major landmarks and eat good food. My favorite thing that we ate was Joe's Pizza. 
+                  Probably a must try recommendation from me lol..
                 </p>
                 <div className="episode-meta">
                   <div className="episode-info">
-                    <span className="episode-date">May 2024</span>
-                    <span className="episode-duration">• 45 min</span>
+                    <span className="episode-date">May 2025</span>
+                    <span className="episode-duration">• 96 hours</span>
                   </div>
                   <div className="episode-actions-right">
                     <button className="episode-action-btn play-btn-right">
@@ -88,49 +89,6 @@ const About = () => {
                   </div>
                 </div>
                 <div className="episode-actions-left">
-                    <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                      <FaDownload />
-                    </a>
-                    <button className="episode-action-btn">
-                      <FaPlus />
-                    </button>
-                    <button className="episode-action-btn">
-                      <FaLink />
-                    </button>
-                  </div>
-              </div>
-            </div>
-            
-            {/* Mobile version */}
-            <div className="mobile-episode">
-              <div className="episode-header">
-                <div className="episode-artwork">
-                  <img src="/images/jdosephgraduation.png" alt="Episode" />
-                  <button className="episode-play-btn">
-                    <FaPlay />
-                  </button>
-                </div>
-                <div className="episode-content">
-                  <h3 className="episode-title"> UGA to DoD Software Engineering</h3>
-                </div>
-              </div>
-              <p className="episode-description">
-                In this episode, I graduated from the University of Georgia with a Bachelors of Science in
-                Computer Science in May 2024. Post grad, I joined the United States Air Force as a Software Engineer. 
-                I currently hold a secret clearance and work on various projects supporting national security.
-              </p>
-              <div className="episode-meta">
-                <div className="episode-info">
-                  <span className="episode-date">May 2024</span>
-                  <span className="episode-duration">• 45 min</span>
-                </div>
-                <div className="episode-actions-right">
-                  <button className="episode-action-btn play-btn-right">
-                    <FaPlay />
-                  </button>
-                </div>
-              </div>
-              <div className="episode-actions-left">
                   <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
                     <FaDownload />
                   </a>
@@ -141,74 +99,31 @@ const About = () => {
                     <FaLink />
                   </button>
                 </div>
-            </div>
-          </div>
-          
-          <div className="episode-item">
-            {/* Desktop version */}
-            <div className="desktop-episode">
-              <div className="episode-artwork">
-                <img src="/images/japan.JPG" alt="Episode" />
-                <button className="episode-play-btn">
-                  <FaPlay />
-                </button>
-              </div>
-              <div className="episode-content">
-                <h3 className="episode-title">Trip to Japan</h3>
-                <p className="episode-description">
-                  In this episode, I explored Tokyo and Kyoto, Japan for one week in March 2024.
-                  From the bustling city life to the serene temples, I loved the 
-                  culture, food, and unforgettable moments of my trip. P.S, you have to try the egg sandwiches
-                  from the convenience stores!
-                </p>
-                <div className="episode-meta">
-                  <div className="episode-info">
-                    <span className="episode-date">March 2025</span>
-                    <span className="episode-duration">• 38 min</span>
-                  </div>
-                  <div className="episode-actions-right">
-                    <button className="episode-action-btn play-btn-right">
-                      <FaPlay />
-                    </button>
-                  </div>
-                </div>
-                <div className="episode-actions-left">
-                    <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                      <FaDownload />
-                    </a>
-                    <button className="episode-action-btn">
-                      <FaPlus />
-                    </button>
-                    <button className="episode-action-btn">
-                      <FaLink />
-                    </button>
-                  </div>
               </div>
             </div>
-            
+
             {/* Mobile version */}
             <div className="mobile-episode">
               <div className="episode-header">
                 <div className="episode-artwork">
-                  <img src="/images/japan.JPG" alt="Episode" />
+                  <img src="/images/pizza.png" alt="Episode" />
                   <button className="episode-play-btn">
                     <FaPlay />
                   </button>
                 </div>
                 <div className="episode-content">
-                  <h3 className="episode-title">Trip to Japan</h3>
+                <h3 className="episode-title">Weekend Trip To NYC</h3>
                 </div>
               </div>
               <p className="episode-description">
-                In this episode, I explored Tokyo and Kyoto, Japan for one week in March 2024.
-                From the bustling city life to the serene temples, I loved the 
-                culture, food, and unforgettable moments of my trip. P.S, you have to try the egg sandwiches
-                from the convenience stores!
-              </p>
+                  For Memorial Day 2025, I visited NYC with my friend John. Our main goal of the NYC trip was to
+                  hit major landmarks and eat good food. My favorite thing that we ate was Joe's Pizza. 
+                  Probably a must try recommendation from me lol..
+                </p>
               <div className="episode-meta">
                 <div className="episode-info">
-                  <span className="episode-date">March 2025</span>
-                  <span className="episode-duration">• 38 min</span>
+                  <span className="episode-date">May 2025</span>
+                  <span className="episode-duration">• 96 hours</span>
                 </div>
                 <div className="episode-actions-right">
                   <button className="episode-action-btn play-btn-right">
@@ -217,6 +132,47 @@ const About = () => {
                 </div>
               </div>
               <div className="episode-actions-left">
+                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                  <FaDownload />
+                </a>
+                <button className="episode-action-btn">
+                  <FaPlus />
+                </button>
+                <button className="episode-action-btn">
+                  <FaLink />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="episode-item">
+            {/* Desktop version */}
+            <div className="desktop-episode">
+              <div className="episode-artwork">
+                <img src="/images/lasvegas.jpg" alt="Episode" />
+                <button className="episode-play-btn">
+                  <FaPlay />
+                </button>
+              </div>
+              <div className="episode-content">
+                <h3 className="episode-title">Las Vegas</h3>
+                <p className="episode-description">
+                  Towards the beginning of May, my family invited me to go to Las Vegas.
+                  This was my first time going to Vegas so I had two goals in mind: to eat a buffet
+                  and win a lot from gambling. Let's just say I was able to eat a good buffet.
+                </p>
+                <div className="episode-meta">
+                  <div className="episode-info">
+                    <span className="episode-date">May 2025</span>
+                    <span className="episode-duration">• 96 hours</span>
+                  </div>
+                  <div className="episode-actions-right">
+                    <button className="episode-action-btn play-btn-right">
+                      <FaPlay />
+                    </button>
+                  </div>
+                </div>
+                <div className="episode-actions-left">
                   <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
                     <FaDownload />
                   </a>
@@ -227,9 +183,52 @@ const About = () => {
                     <FaLink />
                   </button>
                 </div>
+              </div>
+            </div>
+
+            {/* Mobile version */}
+            <div className="mobile-episode">
+              <div className="episode-header">
+                <div className="episode-artwork">
+                  <img src="/images/lasvegas.jpg" alt="Episode" />
+                  <button className="episode-play-btn">
+                    <FaPlay />
+                  </button>
+                </div>
+                <div className="episode-content">
+                <h3 className="episode-title">Las Vegas</h3>
+                </div>
+              </div>
+              <p className="episode-description">
+                Towards the beginning of May, my family invited me to go to Las Vegas.
+                This was my first time going to Vegas so I had two goals in mind: to eat a buffet
+                and win a lot from gambling. Let's just say I was able to eat a good buffet.
+                </p>
+              <div className="episode-meta">
+                <div className="episode-info">
+                  <span className="episode-date">May 2025</span>
+                  <span className="episode-duration">• 96 hours</span>
+                </div>
+                <div className="episode-actions-right">
+                  <button className="episode-action-btn play-btn-right">
+                    <FaPlay />
+                  </button>
+                </div>
+              </div>
+              <div className="episode-actions-left">
+                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                  <FaDownload />
+                </a>
+                <button className="episode-action-btn">
+                  <FaPlus />
+                </button>
+                <button className="episode-action-btn">
+                  <FaLink />
+                </button>
+              </div>
             </div>
           </div>
-          
+
           <div className="episode-item">
             {/* Desktop version */}
             <div className="desktop-episode">
@@ -243,14 +242,14 @@ const About = () => {
                 <h3 className="episode-title">Pickleball Addiction</h3>
                 <p className="episode-description">
                   Since graduating college, I've picked up pickleball as a new hobby.
-                  In this episode, I earned my first ever pickleball second-place by 
+                  In this episode, I earned my first ever pickleball second-place by
                   winning a league in Spring 2024. Currently, I would say I am a 3.5 DUPR but
                   aiming to reach 4.0 by the end of 2025!
                 </p>
                 <div className="episode-meta">
                   <div className="episode-info">
                     <span className="episode-date">Spring 2025</span>
-                    <span className="episode-duration">• 32 min</span>
+                    <span className="episode-duration">• 6 months</span>
                   </div>
                   <div className="episode-actions-right">
                     <button className="episode-action-btn play-btn-right">
@@ -259,19 +258,19 @@ const About = () => {
                   </div>
                 </div>
                 <div className="episode-actions-left">
-                    <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                      <FaDownload />
-                    </a>
-                    <button className="episode-action-btn">
-                      <FaPlus />
-                    </button>
-                    <button className="episode-action-btn">
-                      <FaLink />
-                    </button>
-                  </div>
+                  <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                    <FaDownload />
+                  </a>
+                  <button className="episode-action-btn">
+                    <FaPlus />
+                  </button>
+                  <button className="episode-action-btn">
+                    <FaLink />
+                  </button>
+                </div>
               </div>
             </div>
-            
+
             {/* Mobile version */}
             <div className="mobile-episode">
               <div className="episode-header">
@@ -287,14 +286,14 @@ const About = () => {
               </div>
               <p className="episode-description">
                 Since graduating college, I've picked up pickleball as a new hobby.
-                In this episode, I earned my first ever pickleball second-place by 
+                In this episode, I earned my first ever pickleball second-place by
                 winning a league in Spring 2024. Currently, I would say I am a 3.5 DUPR but
                 aiming to reach 4.0 by the end of 2025!
               </p>
               <div className="episode-meta">
                 <div className="episode-info">
                   <span className="episode-date">Spring 2025</span>
-                  <span className="episode-duration">• 32 min</span>
+                  <span className="episode-duration">• 6 months</span>
                 </div>
                 <div className="episode-actions-right">
                   <button className="episode-action-btn play-btn-right">
@@ -303,6 +302,48 @@ const About = () => {
                 </div>
               </div>
               <div className="episode-actions-left">
+                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                  <FaDownload />
+                </a>
+                <button className="episode-action-btn">
+                  <FaPlus />
+                </button>
+                <button className="episode-action-btn">
+                  <FaLink />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="episode-item">
+            {/* Desktop version */}
+            <div className="desktop-episode">
+              <div className="episode-artwork">
+                <img src="/images/japan.JPG" alt="Episode" />
+                <button className="episode-play-btn">
+                  <FaPlay />
+                </button>
+              </div>
+              <div className="episode-content">
+                <h3 className="episode-title">Trip to Japan</h3>
+                <p className="episode-description">
+                  In this episode, I explored Tokyo and Kyoto, Japan for one week in March 2024.
+                  From the bustling city life to the serene temples, I loved the
+                  culture, food, and unforgettable moments of my trip. P.S, you have to try the egg sandwiches
+                  from the convenience stores!
+                </p>
+                <div className="episode-meta">
+                  <div className="episode-info">
+                    <span className="episode-date">March 2025</span>
+                    <span className="episode-duration">• 1 week</span>
+                  </div>
+                  <div className="episode-actions-right">
+                    <button className="episode-action-btn play-btn-right">
+                      <FaPlay />
+                    </button>
+                  </div>
+                </div>
+                <div className="episode-actions-left">
                   <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
                     <FaDownload />
                   </a>
@@ -313,6 +354,134 @@ const About = () => {
                     <FaLink />
                   </button>
                 </div>
+              </div>
+            </div>
+
+            {/* Mobile version */}
+            <div className="mobile-episode">
+              <div className="episode-header">
+                <div className="episode-artwork">
+                  <img src="/images/japan.JPG" alt="Episode" />
+                  <button className="episode-play-btn">
+                    <FaPlay />
+                  </button>
+                </div>
+                <div className="episode-content">
+                  <h3 className="episode-title">Trip to Japan</h3>
+                </div>
+              </div>
+              <p className="episode-description">
+                In this episode, I explored Tokyo and Kyoto, Japan for one week in March 2024.
+                From the bustling city life to the serene temples, I loved the
+                culture, food, and unforgettable moments of my trip. P.S, you have to try the egg sandwiches
+                from the convenience stores!
+              </p>
+              <div className="episode-meta">
+                <div className="episode-info">
+                  <span className="episode-date">March 2025</span>
+                  <span className="episode-duration">• 1 week</span>
+                </div>
+                <div className="episode-actions-right">
+                  <button className="episode-action-btn play-btn-right">
+                    <FaPlay />
+                  </button>
+                </div>
+              </div>
+              <div className="episode-actions-left">
+                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                  <FaDownload />
+                </a>
+                <button className="episode-action-btn">
+                  <FaPlus />
+                </button>
+                <button className="episode-action-btn">
+                  <FaLink />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="episode-item">
+            {/* Desktop version */}
+            <div className="desktop-episode">
+              <div className="episode-artwork">
+                <img src="/images/jdosephgraduation.png" alt="Episode" />
+                <button className="episode-play-btn">
+                  <FaPlay />
+                </button>
+              </div>
+              <div className="episode-content">
+                <h3 className="episode-title"> UGA to DoD Software Engineering</h3>
+                <p className="episode-description">
+                  In this episode, I graduated from the University of Georgia with a Bachelors of Science in
+                  Computer Science in May 2024. Post grad, I joined the United States Air Force as a Software Engineer.
+                  I currently hold a secret clearance and work on various projects supporting national security.
+                </p>
+                <div className="episode-meta">
+                  <div className="episode-info">
+                    <span className="episode-date">May 2024</span>  
+                    <span className="episode-duration">• Present</span>
+                  </div>
+                  <div className="episode-actions-right">
+                    <button className="episode-action-btn play-btn-right">
+                      <FaPlay />
+                    </button>
+                  </div>
+                </div>
+                <div className="episode-actions-left">
+                  <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                    <FaDownload />
+                  </a>
+                  <button className="episode-action-btn">
+                    <FaPlus />
+                  </button>
+                  <button className="episode-action-btn">
+                    <FaLink />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile version */}
+            <div className="mobile-episode">
+              <div className="episode-header">
+                <div className="episode-artwork">
+                  <img src="/images/jdosephgraduation.png" alt="Episode" />
+                  <button className="episode-play-btn">
+                    <FaPlay />
+                  </button>
+                </div>
+                <div className="episode-content">
+                  <h3 className="episode-title"> UGA to DoD Software Engineering</h3>
+                </div>
+              </div>
+              <p className="episode-description">
+                In this episode, I graduated from the University of Georgia with a Bachelors of Science in
+                Computer Science in May 2024. Post grad, I joined the United States Air Force as a Software Engineer.
+                I currently hold a secret clearance and work on various projects supporting national security.
+              </p>
+              <div className="episode-meta">
+                <div className="episode-info">
+                  <span className="episode-date">May 2024</span>
+                  <span className="episode-duration">• Present</span>
+                </div>
+                <div className="episode-actions-right">
+                  <button className="episode-action-btn play-btn-right">
+                    <FaPlay />
+                  </button>
+                </div>
+              </div>
+              <div className="episode-actions-left">
+                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                  <FaDownload />
+                </a>
+                <button className="episode-action-btn">
+                  <FaPlus />
+                </button>
+                <button className="episode-action-btn">
+                  <FaLink />
+                </button>
+              </div>
             </div>
           </div>
         </div>

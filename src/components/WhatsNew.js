@@ -1,28 +1,19 @@
 import React from 'react';
-import { FaGithub, FaCode, FaBug, FaStar, FaBell } from 'react-icons/fa';
+import { FaGithub, FaCode, FaBug, FaStar, FaBell, FaSync } from 'react-icons/fa';
 
 const WhatsNew = () => {
   const updates = [
     {
         id: 0,
-        title: "Introduced 'What's New' Section",
-        description: "Added a new section to highlight recent updates and improvements to the portfolio website. This section will be updated regularly to keep visitors informed about the latest changes.",
-        type: "New Feature",
-        date: "Sept 6, 2025",
-        icon: <FaStar />,
-        color: "#1db954"
+        title: "Inital Launch of Website",
+        description: "The first inital commit of this portfolio website. Built with React, showcasing my projects and experience.",
+        type: "Launch",
+        date: "1 week ago",
+        icon: <FaGithub />,
+        color: "#1ed760"
     },
     {
       id: 1,
-      title: "Fixed Home Button Navigation",
-      description: "Home button now properly navigates to About section without nav-link styling conflicts. Improved state management across components.",
-      type: "New Feature",
-      date: "Sept 5, 2025",
-      icon: <FaBug />,
-      color: "#1ed760"  
-    },
-    {
-      id: 2,
       title: "Enhanced Mobile Responsiveness",
       description: "Improved mobile navigation and fixed styling issues on smaller screens. Specifically adding margin-left for the music player on mobile.",
       type: "Enhancement",
@@ -31,13 +22,40 @@ const WhatsNew = () => {
       color: "#1db954"
     },
     {
-      id: 3,
-      title: "Inital Launch of Website",
-      description: "The first inital commit of this portfolio website. Built with React, showcasing my projects and experience.",
-      type: "Launch",
-      date: "1 week ago",
-      icon: <FaGithub />,
+      id: 2,
+      title: "Fixed Home Button Navigation",
+      description: "Home button now properly navigates to About section without nav-link styling conflicts. Improved state management across components.",
+      type: "New Feature",
+      date: "Sept 5, 2025",
+      icon: <FaBug />,
       color: "#1ed760"
+    },
+    {
+      id: 3,
+      title: "Introduced 'What's New' Section",
+        description: "Added a new section to highlight recent updates and improvements to the portfolio website. This section will be updated regularly to keep visitors informed about the latest changes.",
+        type: "New Feature",
+        date: "Sept 6, 2025",
+        icon: <FaStar />,
+        color: "#1db954"
+    },
+    {
+        id: 4,
+        title: "Updated About Epsiodes",
+        description: "Refreshed the About section with new episodes (Las Vegas and NYC).",
+        type: "Update",
+        date: "Sept 6, 2025",
+        icon: <FaSync />,
+        color: "#1db954"
+    },
+    {
+        id: 5,
+        title: "Music Player Functionality",
+        description: "Music Player now plays my playlist that I made.",
+        type: "New Feature",
+        date: "Sept 6, 2025",
+        icon: <FaStar />,
+        color: "#1ed760"
     }
   ];
 
@@ -67,7 +85,7 @@ const WhatsNew = () => {
         </div>
 
         <div className="updates-list">
-          {updates.map((update, index) => (
+          {updates.slice().reverse().map((update, index) => (
             <div key={update.id} className={`update-card ${index === 0 ? 'latest' : ''}`}>
               <div className="update-icon" style={{ color: update.color }}>
                 {update.icon}
