@@ -33,10 +33,10 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
         <div className="sidebar-title-row">
           <h2 className="sidebar-title">Joseph Do</h2>
           <div className="sidebar-controls">
-          <button className="sidebar-plus-btn">
+          <button className="sidebar-plus-btn" disabled>
               <img src="/images/JD.svg" alt="Joseph Do" className="sidebar-logo" />
             </button>
-            <button className="sidebar-plus-btn">
+            <button className="sidebar-plus-btn" disabled>
               <FaPlus size={12} />
             </button>
           </div>
