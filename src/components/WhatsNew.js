@@ -10,7 +10,7 @@ const WhatsNew = () => {
         type: "Launch",
         date: "1 week ago",
         icon: <FaGithub />,
-        color: "#1ed760"
+        color: "#fff"
     },
     {
       id: 1,
@@ -19,16 +19,16 @@ const WhatsNew = () => {
       type: "Enhancement",
       date: "Aug 25, 2025",
       icon: <FaCode />,
-      color: "#1db954"
+      color: "#fff"
     },
     {
       id: 2,
       title: "Fixed Home Button Navigation",
       description: "Home button now properly navigates to About section without nav-link styling conflicts. Improved state management across components.",
-      type: "New Feature",
+      type: "Bug Fix",
       date: "Sept 5, 2025",
       icon: <FaBug />,
-      color: "#1ed760"
+      color: "#fff"
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const WhatsNew = () => {
         type: "New Feature",
         date: "Sept 6, 2025",
         icon: <FaStar />,
-        color: "#1db954"
+        color: "#fff"
     },
     {
         id: 4,
@@ -46,7 +46,7 @@ const WhatsNew = () => {
         type: "Update",
         date: "Sept 6, 2025",
         icon: <FaSync />,
-        color: "#1db954"
+        color: "#fff"
     },
     {
         id: 5,
@@ -55,7 +55,16 @@ const WhatsNew = () => {
         type: "New Feature",
         date: "Sept 6, 2025",
         icon: <FaStar />,
-        color: "#1ed760"
+        color: "#fff"
+    },
+    {
+        id: 6,
+        title: "Added Functionality for right side buttons",
+        description: "Friend Icon at the top right now shows a popover of my fav animes. Click the profile for an easter egg. ",
+        type: "New Feature",
+        date: "Sept 6, 2025",
+        icon: <FaStar />,
+        color: "#fff"
     }
   ];
 
