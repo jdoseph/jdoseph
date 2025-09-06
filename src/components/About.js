@@ -57,7 +57,6 @@ const About = () => {
       <div className="podcast-episodes">
         <div className="episodes-header">
           <h2>Latest Episodes</h2>
-          <button className="see-all-btn">See all</button>
         </div>
         
         <div className="episode-list">

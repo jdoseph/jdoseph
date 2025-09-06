@@ -1,0 +1,100 @@
+import React from 'react';
+import { FaGithub, FaCode, FaBug, FaStar, FaBell } from 'react-icons/fa';
+
+const WhatsNew = () => {
+  const updates = [
+    {
+        id: 0,
+        title: "Introduced 'What's New' Section",
+        description: "Added a new section to highlight recent updates and improvements to the portfolio website. This section will be updated regularly to keep visitors informed about the latest changes.",
+        type: "New Feature",
+        date: "Sept 6, 2025",
+        icon: <FaStar />,
+        color: "#1db954"
+    },
+    {
+      id: 1,
+      title: "Fixed Home Button Navigation",
+      description: "Home button now properly navigates to About section without nav-link styling conflicts. Improved state management across components.",
+      type: "New Feature",
+      date: "Sept 5, 2025",
+      icon: <FaBug />,
+      color: "#1ed760"  
+    },
+    {
+      id: 2,
+      title: "Enhanced Mobile Responsiveness",
+      description: "Improved mobile navigation and fixed styling issues on smaller screens. Specifically adding margin-left for the music player on mobile.",
+      type: "Enhancement",
+      date: "Aug 25, 2025",
+      icon: <FaCode />,
+      color: "#1db954"
+    },
+    {
+      id: 3,
+      title: "Inital Launch of Website",
+      description: "The first inital commit of this portfolio website. Built with React, showcasing my projects and experience.",
+      type: "Launch",
+      date: "1 week ago",
+      icon: <FaGithub />,
+      color: "#1ed760"
+    }
+  ];
+
+  return (
+    <div className="whats-new-section">
+      {/* Hero Section */}
+      <div className="whats-new-hero">
+        <div className="hero-content">
+          <div className="hero-icon">
+            <FaBell size={80} color="#1ed760" />
+          </div>
+          <div className="hero-text">
+            <h1 className="hero-title">What's New</h1>
+            <p className="hero-subtitle">The latest updates and improvements to jdoseph's portfolio</p>
+            <div className="hero-meta">
+              <span>Updated ASAP • Latest changes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Updates List */}
+      <div className="updates-container">
+        <div className="updates-header">
+          <h2>Recent Updates</h2>
+          <span className="updates-count">{updates.length} updates</span>
+        </div>
+
+        <div className="updates-list">
+          {updates.map((update, index) => (
+            <div key={update.id} className={`update-card ${index === 0 ? 'latest' : ''}`}>
+              <div className="update-icon" style={{ color: update.color }}>
+                {update.icon}
+              </div>
+              <div className="update-content">
+                <div className="update-header">
+                  <h3 className="update-title">{update.title}</h3>
+                  <div className="update-meta">
+                    <span className="update-date">{update.date}</span>
+                    <span className="update-type" style={{ color: update.color }}>
+                      {update.type}
+                    </span>
+                    {index === 0 && (
+                  <div className="latest-badge">
+                    <span>Latest</span>
+                  </div>
+                )}
+                  </div>
+                </div>
+                <p className="update-description">{update.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WhatsNew;

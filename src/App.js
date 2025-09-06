@@ -4,12 +4,17 @@ import { FaHome, FaSearch, FaChevronLeft, FaChevronRight, FaBell, FaUserFriends 
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 import MusicPlayer from './components/MusicPlayer';
+import WhatsNew from './components/WhatsNew';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
 
   const handleHomeClick = () => {
     setActiveSection('about');
+  };
+
+  const handleBellClick = () => {
+    setActiveSection('whatsnew');
   };
 
   return (
@@ -37,7 +42,7 @@ function App() {
           </div>
         </div>
         <div className="header-right-icons">
-          <button className="header-icon-button">
+          <button className="header-icon-button" onClick={handleBellClick}>
             <FaBell />
           </button>
           <button className="header-icon-button">
@@ -49,8 +54,16 @@ function App() {
         </div>
       </div>
       <div className="app-body">
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-        <MainContent activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+        {activeSection === 'whatsnew' ? (
+          <div className="spotify-main-content">
+            <WhatsNew />
+          </div>
+        ) : (
+          <>
+            <MainContent activeSection={activeSection} setActiveSection={setActiveSection} />
+          </>
+        )}
       </div>
       <MusicPlayer />
     </div>
