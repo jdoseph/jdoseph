@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaChevronDown, FaVolumeUp } from 'react-icons/fa';
 import { BiShuffle, BiRepeat } from 'react-icons/bi';
 import { useMusic } from '../context/MusicContext';
 
 const MobilePlayer = () => {
+  const [isClosing, setIsClosing] = useState(false);
+
   const {
     currentTrack,
     isPlaying,
@@ -22,6 +24,16 @@ const MobilePlayer = () => {
     toggleRepeat,
     toggleMobilePlayer
   } = useMusic();
+
+  const handleClose = () => {
+    setIsClosing(true);
+    
+    // Wait for animation to complete before actually closing
+    setTimeout(() => {
+      toggleMobilePlayer();
+      setIsClosing(false);
+    }, 300);
+  };
 
   const formatTime = (seconds) => {
     if (!seconds || isNaN(seconds)) return '0:00';
@@ -61,13 +73,16 @@ const MobilePlayer = () => {
   return (
     <>
       {/* Backdrop */}
-      <div className="mobile-player-backdrop" onClick={toggleMobilePlayer}></div>
+      <div 
+        className={`mobile-player-backdrop ${isClosing ? 'closing' : ''}`} 
+        onClick={handleClose}
+      ></div>
       
       {/* Mobile Player Off-canvas */}
-      <div className="mobile-player-offcanvas">
+      <div className={`mobile-player-offcanvas ${isClosing ? 'closing' : ''}`}>
         {/* Header with close button */}
         <div className="mobile-player-header">
-          <button className="mobile-close-btn" onClick={toggleMobilePlayer}>
+          <button className="mobile-close-btn" onClick={handleClose}>
             <FaChevronDown />
           </button>
         </div>
