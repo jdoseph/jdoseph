@@ -3,6 +3,7 @@ import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaVolumeUp, FaListUl } 
 import { BiShuffle, BiRepeat } from 'react-icons/bi';
 import { useMusic } from '../context/MusicContext';
 import Queue from './Queue';
+import MobilePlayer from './MobilePlayer';
 
 const MusicPlayer = () => {
   const {
@@ -21,7 +22,8 @@ const MusicPlayer = () => {
     setVolume,
     toggleShuffle,
     toggleRepeat,
-    toggleQueue
+    toggleQueue,
+    toggleMobilePlayer
   } = useMusic();
 
   const formatTime = (seconds) => {
@@ -80,9 +82,19 @@ const MusicPlayer = () => {
 
   const volumePercentage = volume * 100;
 
+  const handleMobilePlayerClick = (e) => {
+    // Only trigger on mobile screens
+    if (window.innerWidth <= 768) {
+      // Don't trigger if clicking on buttons
+      if (!e.target.closest('button')) {
+        toggleMobilePlayer();
+      }
+    }
+  };
+
   return (
     <>
-      <div className="music-player">
+      <div className="music-player" onClick={handleMobilePlayerClick}>
         {/* Currently Playing */}
         <div className="player-left">
           <div className="current-track">
@@ -219,6 +231,7 @@ const MusicPlayer = () => {
       </div>
 
       <Queue />
+      <MobilePlayer />
     </>
   );
 };

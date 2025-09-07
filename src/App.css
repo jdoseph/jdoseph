@@ -2631,6 +2631,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    cursor: pointer;
   }
   
   /* Mobile current-track layout fixes */
@@ -2671,7 +2672,6 @@ body {
   .mobile-progress-bar {
     display: block;
     position: fixed;
-    bottom: 72px;
     left: 0;
     right: 0;
     padding: 4px 12px 8px 12px;
@@ -3281,6 +3281,256 @@ body {
   a:hover {
     text-decoration: underline;
   }
+}
+
+/* Mobile Player Off-canvas */
+.mobile-player-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+  opacity: 0;
+  animation: backdropFadeIn 0.3s ease forwards;
+}
+
+@keyframes backdropFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.mobile-player-offcanvas {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--spotify-grey) 0%, var(--spotify-dark-grey) 100%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  transform: translateY(100%);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.mobile-player-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.mobile-close-btn {
+  background: none;
+  border: none;
+  color: var(--spotify-light-grey);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.mobile-close-btn:hover {
+  color: var(--spotify-white);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-album-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.mobile-album-art {
+  width: 280px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.mobile-album-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-track-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mobile-track-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--spotify-white);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.mobile-track-artist {
+  font-size: 16px;
+  color: var(--spotify-light-grey);
+  margin: 0;
+}
+
+.mobile-progress-section {
+  margin-bottom: 40px;
+}
+
+.mobile-progress-bar {
+  cursor: pointer;
+}
+
+.mobile-progress-bg {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.mobile-progress-fill {
+  height: 100%;
+  background-color: var(--spotify-white);
+  border-radius: 2px;
+  transition: width 0.1s ease;
+}
+
+.mobile-progress-handle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--spotify-white);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-progress-bar:hover .mobile-progress-handle {
+  opacity: 1;
+}
+
+.mobile-time-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--spotify-light-grey);
+}
+
+.mobile-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-control-btn {
+  background: none;
+  border: none;
+  color: var(--spotify-light-grey);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-control-btn:hover {
+  color: var(--spotify-white);
+}
+
+.mobile-control-btn.active {
+  color: var(--spotify-green);
+}
+
+.mobile-play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--spotify-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--spotify-black);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-play-btn:hover {
+  transform: scale(1.05);
+}
+
+.mobile-volume-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.mobile-volume-icon {
+  color: var(--spotify-light-grey);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.mobile-volume-bar {
+  flex: 1;
+  cursor: pointer;
+}
+
+.mobile-volume-bg {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.mobile-volume-fill {
+  height: 100%;
+  background-color: var(--spotify-white);
+  border-radius: 2px;
+  transition: width 0.1s ease;
+}
+
+.mobile-volume-handle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--spotify-white);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-volume-bar:hover .mobile-volume-handle {
+  opacity: 1;
 }
 
 /* Mobile Responsiveness */

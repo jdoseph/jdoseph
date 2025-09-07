@@ -15,7 +15,8 @@ const ACTIONS = {
   TOGGLE_REPEAT: 'TOGGLE_REPEAT',
   SET_LOADING: 'SET_LOADING',
   SET_ERROR: 'SET_ERROR',
-  TOGGLE_QUEUE: 'TOGGLE_QUEUE'
+  TOGGLE_QUEUE: 'TOGGLE_QUEUE',
+  TOGGLE_MOBILE_PLAYER: 'TOGGLE_MOBILE_PLAYER'
 };
 
 // Initial state
@@ -30,7 +31,8 @@ const initialState = {
   isLoading: false,
   error: null,
   playlist: musicLibrary,
-  isQueueOpen: false
+  isQueueOpen: false,
+  isMobilePlayerOpen: false
 };
 
 // Reducer
@@ -65,6 +67,8 @@ const musicReducer = (state, action) => {
       return { ...state, error: action.payload, isLoading: false };
     case ACTIONS.TOGGLE_QUEUE:
       return { ...state, isQueueOpen: !state.isQueueOpen };
+    case ACTIONS.TOGGLE_MOBILE_PLAYER:
+      return { ...state, isMobilePlayerOpen: !state.isMobilePlayerOpen };
     default:
       return state;
   }
@@ -263,6 +267,10 @@ export const MusicProvider = ({ children }) => {
     dispatch({ type: ACTIONS.TOGGLE_QUEUE });
   };
 
+  const toggleMobilePlayer = () => {
+    dispatch({ type: ACTIONS.TOGGLE_MOBILE_PLAYER });
+  };
+
   const value = {
     ...state,
     playTrack,
@@ -273,7 +281,8 @@ export const MusicProvider = ({ children }) => {
     setVolume,
     toggleShuffle,
     toggleRepeat,
-    toggleQueue
+    toggleQueue,
+    toggleMobilePlayer
   };
 
   return (
