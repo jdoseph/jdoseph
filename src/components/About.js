@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPlay, FaHeart, FaEllipsisH, FaDownload, FaPlus, FaLink } from 'react-icons/fa';
+import { FaPlay, FaHeart, FaEllipsisH, FaDownload } from 'react-icons/fa';
 
 const About = () => {
   return (
