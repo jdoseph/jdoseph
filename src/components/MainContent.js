@@ -9,6 +9,68 @@ import Contacts from './Contacts';
 
 const MainContent = ({ activeSection, setActiveSection }) => {
 
+  const getSelector = () => {
+    switch(activeSection) {
+      case 'about':
+        return '.episode-item';
+      case 'experience':
+        return '.experience-track';
+      case 'projects':
+        return '.spotify-card';
+      case 'skills':
+        return '.skill-track';
+      case 'contact':
+        return '.contact-track';
+      default:
+        return '.episode-item';
+    }
+  };
+
+  const handlePlay = () => {
+    const selector = getSelector();
+    const elements = document.querySelectorAll(selector);
+    
+    if (elements.length > 0) {
+      const firstElement = elements[0];
+      
+      firstElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      });
+      
+      firstElement.style.transition = 'background-color 0.3s ease';
+      firstElement.style.backgroundColor = 'rgba(30, 215, 96, 0.2)';
+      
+      setTimeout(() => {
+        firstElement.style.backgroundColor = '';
+      }, 1000);
+    }
+  };
+
+  const handleShuffle = () => {
+    const selector = getSelector();
+    const elements = document.querySelectorAll(selector);
+    
+    if (elements.length > 0) {
+      const randomIndex = Math.floor(Math.random() * elements.length);
+      const randomElement = elements[randomIndex];
+      
+      randomElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      });
+      
+      randomElement.style.transition = 'background-color 0.3s ease';
+      randomElement.style.backgroundColor = 'rgba(30, 215, 96, 0.2)';
+      
+      setTimeout(() => {
+        randomElement.style.backgroundColor = '';
+      }, 1000);
+    }
+  };
+
   const getHeaderInfo = () => {
     switch(activeSection) {
       case 'about':
@@ -130,10 +192,10 @@ const MainContent = ({ activeSection, setActiveSection }) => {
       
       <div className="playlist-controls">
         <div className="control-buttons">
-          <button className="play-button">
+          <button className="play-button" onClick={handlePlay}>
             <FaPlay />
           </button>
-          <button className="secondary-button">
+          <button className="secondary-button" onClick={handleShuffle}>
             <FaShuffle />
           </button>
             <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="action-btn secondary">

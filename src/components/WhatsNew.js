@@ -41,7 +41,7 @@ const WhatsNew = () => {
     },
     {
         id: 4,
-        title: "Updated About Epsiodes",
+        title: "Updated About Episodes",
         description: "Refreshed the About section with new episodes (Las Vegas and NYC).",
         type: "Update",
         date: "Sept 6, 2025",
@@ -59,8 +59,17 @@ const WhatsNew = () => {
     },
     {
         id: 6,
-        title: "Added Functionality for right side buttons",
+        title: "Functionality for Header Icons",
         description: "Friend Icon at the top right now shows a popover of my fav animes. Click the profile for an easter egg. ",
+        type: "New Feature",
+        date: "Sept 6, 2025",
+        icon: <FaStar />,
+        color: "#fff"
+    },
+    {
+        id: 7,
+        title: "Shuffle/Play Buttons Functionality",
+        description: "Pressing the shuffle and the play will scroll either a random or the first element into view. ",
         type: "New Feature",
         date: "Sept 6, 2025",
         icon: <FaStar />,

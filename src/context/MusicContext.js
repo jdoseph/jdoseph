@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useRef, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useReducer, useRef, useEffect } from 'react';
 import { musicLibrary, shufflePlaylist } from '../data/musicLibrary';
 
 const MusicContext = createContext();
@@ -75,35 +75,6 @@ export const MusicProvider = ({ children }) => {
   const [state, dispatch] = useReducer(musicReducer, initialState);
   const audioRef = useRef(null);
 
-  // Define handleNext first (before useEffect that uses it)
-  const handleNext = useCallback(() => {
-    if (!state.currentTrack) return;
-
-    let nextTrack;
-    if (state.repeatMode === 'one') {
-      nextTrack = state.currentTrack;
-      // Restart the song from the beginning
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        dispatch({ type: ACTIONS.SET_CURRENT_TIME, payload: 0 });
-      }
-    } else {
-      const currentIndex = state.playlist.findIndex(track => track.id === state.currentTrack.id);
-      if (currentIndex < state.playlist.length - 1) {
-        nextTrack = state.playlist[currentIndex + 1];
-      } else if (state.repeatMode === 'all') {
-        nextTrack = state.playlist[0];
-      }
-    }
-
-    if (nextTrack) {
-      dispatch({ type: ACTIONS.SET_CURRENT_TRACK, payload: nextTrack });
-      dispatch({ type: ACTIONS.PLAY });
-    } else {
-      dispatch({ type: ACTIONS.PAUSE });
-    }
-  }, [state.currentTrack, state.repeatMode, state.playlist]);
-
   // Initialize audio element
   useEffect(() => {
     audioRef.current = new Audio();
@@ -155,7 +126,8 @@ export const MusicProvider = ({ children }) => {
       audio.removeEventListener('canplay', handleCanPlay);
       audio.removeEventListener('loadstart', handleLoadStart);
     };
-  }, [handleNext, state.volume]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Update audio source when current track changes
   useEffect(() => {
@@ -209,6 +181,34 @@ export const MusicProvider = ({ children }) => {
       dispatch({ type: ACTIONS.PAUSE });
     } else {
       dispatch({ type: ACTIONS.PLAY });
+    }
+  };
+
+  const handleNext = () => {
+    if (!state.currentTrack) return;
+
+    let nextTrack;
+    if (state.repeatMode === 'one') {
+      nextTrack = state.currentTrack;
+      // Restart the song from the beginning
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        dispatch({ type: ACTIONS.SET_CURRENT_TIME, payload: 0 });
+      }
+    } else {
+      const currentIndex = state.playlist.findIndex(track => track.id === state.currentTrack.id);
+      if (currentIndex < state.playlist.length - 1) {
+        nextTrack = state.playlist[currentIndex + 1];
+      } else if (state.repeatMode === 'all') {
+        nextTrack = state.playlist[0];
+      }
+    }
+
+    if (nextTrack) {
+      dispatch({ type: ACTIONS.SET_CURRENT_TRACK, payload: nextTrack });
+      dispatch({ type: ACTIONS.PLAY });
+    } else {
+      dispatch({ type: ACTIONS.PAUSE });
     }
   };
 
