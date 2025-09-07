@@ -144,7 +144,8 @@ export const MusicProvider = ({ children }) => {
         });
       }
     }
-  }, [state.currentTrack, state.isPlaying]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.currentTrack]);
 
   // Handle play/pause state changes
   useEffect(() => {
