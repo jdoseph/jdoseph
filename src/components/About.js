@@ -67,7 +67,9 @@ const About = () => {
               <div className="episode-artwork">
                 <img src="/images/pizza.png" alt="Episode" />
                 <button className="episode-play-btn">
-                  <FaPlay />
+                  <a href="https://www.youtube.com/watch?v=dwmDyCEg204" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                    <FaPlay />
+                  </a>
                 </button>
               </div>
               <div className="episode-content">
@@ -84,20 +86,11 @@ const About = () => {
                   </div>
                   <div className="episode-actions-right">
                     <button className="episode-action-btn play-btn-right">
-                      <FaPlay />
+                      <a href="https://www.youtube.com/watch?v=dwmDyCEg204" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                        <FaPlay />
+                      </a>
                     </button>
                   </div>
-                </div>
-                <div className="episode-actions-left">
-                  <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                    <FaDownload />
-                  </a>
-                  <button className="episode-action-btn">
-                    <FaPlus />
-                  </button>
-                  <button className="episode-action-btn">
-                    <FaLink />
-                  </button>
                 </div>
               </div>
             </div>
@@ -108,7 +101,9 @@ const About = () => {
                 <div className="episode-artwork">
                   <img src="/images/pizza.png" alt="Episode" />
                   <button className="episode-play-btn">
-                    <FaPlay />
+                    <a href="https://www.youtube.com/watch?v=dwmDyCEg204" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
                 <div className="episode-content">
@@ -127,20 +122,11 @@ const About = () => {
                 </div>
                 <div className="episode-actions-right">
                   <button className="episode-action-btn play-btn-right">
-                    <FaPlay />
+                    <a href="https://www.youtube.com/watch?v=dwmDyCEg204" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
-              </div>
-              <div className="episode-actions-left">
-                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                  <FaDownload />
-                </a>
-                <button className="episode-action-btn">
-                  <FaPlus />
-                </button>
-                <button className="episode-action-btn">
-                  <FaLink />
-                </button>
               </div>
             </div>
           </div>
@@ -151,7 +137,9 @@ const About = () => {
               <div className="episode-artwork">
                 <img src="/images/lasvegas.jpg" alt="Episode" />
                 <button className="episode-play-btn">
-                  <FaPlay />
+                  <a href="https://youtu.be/IBv16D1lZ64?si=Q3-4Cx0P8WQ2J2tW" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                    <FaPlay />
+                  </a>
                 </button>
               </div>
               <div className="episode-content">
@@ -168,20 +156,11 @@ const About = () => {
                   </div>
                   <div className="episode-actions-right">
                     <button className="episode-action-btn play-btn-right">
-                      <FaPlay />
+                      <a href="https://youtu.be/IBv16D1lZ64?si=Q3-4Cx0P8WQ2J2tW" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                        <FaPlay />
+                      </a>
                     </button>
                   </div>
-                </div>
-                <div className="episode-actions-left">
-                  <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                    <FaDownload />
-                  </a>
-                  <button className="episode-action-btn">
-                    <FaPlus />
-                  </button>
-                  <button className="episode-action-btn">
-                    <FaLink />
-                  </button>
                 </div>
               </div>
             </div>
@@ -192,7 +171,9 @@ const About = () => {
                 <div className="episode-artwork">
                   <img src="/images/lasvegas.jpg" alt="Episode" />
                   <button className="episode-play-btn">
-                    <FaPlay />
+                    <a href="https://youtu.be/IBv16D1lZ64?si=Q3-4Cx0P8WQ2J2tW" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
                 <div className="episode-content">
@@ -211,20 +192,11 @@ const About = () => {
                 </div>
                 <div className="episode-actions-right">
                   <button className="episode-action-btn play-btn-right">
-                    <FaPlay />
+                    <a href="https://youtu.be/IBv16D1lZ64?si=Q3-4Cx0P8WQ2J2tW" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
-              </div>
-              <div className="episode-actions-left">
-                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                  <FaDownload />
-                </a>
-                <button className="episode-action-btn">
-                  <FaPlus />
-                </button>
-                <button className="episode-action-btn">
-                  <FaLink />
-                </button>
               </div>
             </div>
           </div>
@@ -235,7 +207,9 @@ const About = () => {
               <div className="episode-artwork">
                 <img src="/images/pickleball.jpg" alt="Episode" />
                 <button className="episode-play-btn">
-                  <FaPlay />
+                  <a href="https://youtube.com/shorts/csrHVybmAaU?feature=share" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                    <FaPlay />
+                  </a>
                 </button>
               </div>
               <div className="episode-content">
@@ -253,20 +227,11 @@ const About = () => {
                   </div>
                   <div className="episode-actions-right">
                     <button className="episode-action-btn play-btn-right">
-                      <FaPlay />
+                      <a href="https://youtube.com/shorts/csrHVybmAaU?feature=share" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                        <FaPlay />
+                      </a>
                     </button>
                   </div>
-                </div>
-                <div className="episode-actions-left">
-                  <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                    <FaDownload />
-                  </a>
-                  <button className="episode-action-btn">
-                    <FaPlus />
-                  </button>
-                  <button className="episode-action-btn">
-                    <FaLink />
-                  </button>
                 </div>
               </div>
             </div>
@@ -277,7 +242,9 @@ const About = () => {
                 <div className="episode-artwork">
                   <img src="/images/pickleball.jpg" alt="Episode" />
                   <button className="episode-play-btn">
-                    <FaPlay />
+                    <a href="https://youtube.com/shorts/csrHVybmAaU?feature=share" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
                 <div className="episode-content">
@@ -297,20 +264,11 @@ const About = () => {
                 </div>
                 <div className="episode-actions-right">
                   <button className="episode-action-btn play-btn-right">
-                    <FaPlay />
+                    <a href="https://youtube.com/shorts/csrHVybmAaU?feature=share" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
-              </div>
-              <div className="episode-actions-left">
-                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                  <FaDownload />
-                </a>
-                <button className="episode-action-btn">
-                  <FaPlus />
-                </button>
-                <button className="episode-action-btn">
-                  <FaLink />
-                </button>
               </div>
             </div>
           </div>
@@ -321,7 +279,9 @@ const About = () => {
               <div className="episode-artwork">
                 <img src="/images/japan.JPG" alt="Episode" />
                 <button className="episode-play-btn">
-                  <FaPlay />
+                  <a href="https://youtu.be/f5WFBwyNhik" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                    <FaPlay />
+                  </a>
                 </button>
               </div>
               <div className="episode-content">
@@ -339,20 +299,11 @@ const About = () => {
                   </div>
                   <div className="episode-actions-right">
                     <button className="episode-action-btn play-btn-right">
-                      <FaPlay />
+                      <a href="https://youtu.be/f5WFBwyNhik" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                        <FaPlay />
+                      </a>
                     </button>
                   </div>
-                </div>
-                <div className="episode-actions-left">
-                  <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                    <FaDownload />
-                  </a>
-                  <button className="episode-action-btn">
-                    <FaPlus />
-                  </button>
-                  <button className="episode-action-btn">
-                    <FaLink />
-                  </button>
                 </div>
               </div>
             </div>
@@ -363,7 +314,9 @@ const About = () => {
                 <div className="episode-artwork">
                   <img src="/images/japan.JPG" alt="Episode" />
                   <button className="episode-play-btn">
-                    <FaPlay />
+                    <a href="https://youtu.be/f5WFBwyNhik" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
                 <div className="episode-content">
@@ -383,20 +336,11 @@ const About = () => {
                 </div>
                 <div className="episode-actions-right">
                   <button className="episode-action-btn play-btn-right">
-                    <FaPlay />
+                    <a href="https://youtu.be/f5WFBwyNhik" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
-              </div>
-              <div className="episode-actions-left">
-                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                  <FaDownload />
-                </a>
-                <button className="episode-action-btn">
-                  <FaPlus />
-                </button>
-                <button className="episode-action-btn">
-                  <FaLink />
-                </button>
               </div>
             </div>
           </div>
@@ -407,7 +351,9 @@ const About = () => {
               <div className="episode-artwork">
                 <img src="/images/jdosephgraduation.png" alt="Episode" />
                 <button className="episode-play-btn">
-                  <FaPlay />
+                  <a href="https://youtu.be/8XBuzyqeP5s?si=5ZfIj9IIOUfV6MtC" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                    <FaPlay />
+                  </a>
                 </button>
               </div>
               <div className="episode-content">
@@ -424,20 +370,11 @@ const About = () => {
                   </div>
                   <div className="episode-actions-right">
                     <button className="episode-action-btn play-btn-right">
-                      <FaPlay />
+                      <a href="https://youtu.be/8XBuzyqeP5s?si=5ZfIj9IIOUfV6MtC" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                        <FaPlay />
+                      </a>
                     </button>
                   </div>
-                </div>
-                <div className="episode-actions-left">
-                  <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                    <FaDownload />
-                  </a>
-                  <button className="episode-action-btn">
-                    <FaPlus />
-                  </button>
-                  <button className="episode-action-btn">
-                    <FaLink />
-                  </button>
                 </div>
               </div>
             </div>
@@ -448,7 +385,9 @@ const About = () => {
                 <div className="episode-artwork">
                   <img src="/images/jdosephgraduation.png" alt="Episode" />
                   <button className="episode-play-btn">
-                    <FaPlay />
+                    <a href="https://youtu.be/8XBuzyqeP5s?si=5ZfIj9IIOUfV6MtC" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
                 <div className="episode-content">
@@ -467,20 +406,11 @@ const About = () => {
                 </div>
                 <div className="episode-actions-right">
                   <button className="episode-action-btn play-btn-right">
-                    <FaPlay />
+                    <a href="https://youtu.be/8XBuzyqeP5s?si=5ZfIj9IIOUfV6MtC" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
+                      <FaPlay />
+                    </a>
                   </button>
                 </div>
-              </div>
-              <div className="episode-actions-left">
-                <a href="/josephdoresume.pdf" target="_blank" rel="noopener noreferrer" className="episode-action-btn">
-                  <FaDownload />
-                </a>
-                <button className="episode-action-btn">
-                  <FaPlus />
-                </button>
-                <button className="episode-action-btn">
-                  <FaLink />
-                </button>
               </div>
             </div>
           </div>

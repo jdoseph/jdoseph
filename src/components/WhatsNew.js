@@ -74,6 +74,15 @@ const WhatsNew = () => {
         date: "Sept 6, 2025",
         icon: <FaStar />,
         color: "#fff"
+    },
+    {
+        id: 8,
+        title: "About Episode Button Functionality",
+        description: "Pressing the play buttons within the episodes will open my youtube video about the topic.",
+        type: "New Feature",
+        date: "Sept 6, 2025",
+        icon: <FaStar />,
+        color: "#fff"
     }
   ];
 
