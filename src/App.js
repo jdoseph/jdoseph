@@ -12,13 +12,46 @@ import confetti from "canvas-confetti";
 function App() {
   const [activeSection, setActiveSection] = useState('about');
   const [isAnimePopoverOpen, setIsAnimePopoverOpen] = useState(false);
+  const [navigationHistory, setNavigationHistory] = useState(['about']);
+  const [currentHistoryIndex, setCurrentHistoryIndex] = useState(0);
+
+  // Enhanced section change function that tracks history
+  const navigateToSection = (section) => {
+    if (section === activeSection) return; // Don't add duplicate entries
+    
+    // Remove any forward history if we're not at the end
+    const newHistory = navigationHistory.slice(0, currentHistoryIndex + 1);
+    
+    // Add new section to history
+    newHistory.push(section);
+    
+    setNavigationHistory(newHistory);
+    setCurrentHistoryIndex(newHistory.length - 1);
+    setActiveSection(section);
+  };
+
+  const handleBackClick = () => {
+    if (currentHistoryIndex > 0) {
+      const newIndex = currentHistoryIndex - 1;
+      setCurrentHistoryIndex(newIndex);
+      setActiveSection(navigationHistory[newIndex]);
+    }
+  };
+
+  const handleForwardClick = () => {
+    if (currentHistoryIndex < navigationHistory.length - 1) {
+      const newIndex = currentHistoryIndex + 1;
+      setCurrentHistoryIndex(newIndex);
+      setActiveSection(navigationHistory[newIndex]);
+    }
+  };
 
   const handleHomeClick = () => {
-    setActiveSection('about');
+    navigateToSection('about');
   };
 
   const handleBellClick = () => {
-    setActiveSection('whatsnew');
+    navigateToSection('whatsnew');
   };
 
   const handleAnimeClick = () => {
@@ -28,6 +61,10 @@ function App() {
   const handleAnimePopoverClose = () => {
     setIsAnimePopoverOpen(false);
   };
+
+  // Check if navigation buttons should be enabled
+  const canGoBack = currentHistoryIndex > 0;
+  const canGoForward = currentHistoryIndex < navigationHistory.length - 1;
 
   const handleConfetti = () => {
     var count = 200;
@@ -76,10 +113,20 @@ function App() {
       <div className="spotify-app">
         <div className="search-header">
           <div className="nav-buttons">
-            <button className="nav-btn" disabled>
+            <button 
+              className="nav-btn" 
+              disabled={!canGoBack}
+              onClick={handleBackClick}
+              title="Go back"
+            >
               <FaChevronLeft />
             </button>
-            <button className="nav-btn" disabled>
+            <button 
+              className="nav-btn" 
+              disabled={!canGoForward}
+              onClick={handleForwardClick}
+              title="Go forward"
+            >
               <FaChevronRight />
             </button>
           </div>
@@ -109,14 +156,14 @@ function App() {
           </div>
         </div>
         <div className="app-body">
-        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+        <Sidebar activeSection={activeSection} setActiveSection={navigateToSection} />
           {activeSection === 'whatsnew' ? (
             <div className="spotify-main-content">
               <WhatsNew />
             </div>
           ) : (
             <>
-              <MainContent activeSection={activeSection} setActiveSection={setActiveSection} />
+              <MainContent activeSection={activeSection} setActiveSection={navigateToSection} />
             </>
           )}
         </div>

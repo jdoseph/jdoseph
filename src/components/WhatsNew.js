@@ -83,6 +83,15 @@ const WhatsNew = () => {
         date: "Sept 6, 2025",
         icon: <FaStar />,
         color: "#fff"
+    },
+    {
+        id:9,
+        title: "Nav Bar Desktop Update",
+        description: "Nav prev and Nav next in the top left of desktop view works accordingly.",
+        type: "Enhancement",
+        date: "Sept 7, 2025",
+        icon: <FaCode />,
+        color: "#fff"
     }
   ];
 
