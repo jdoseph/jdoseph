@@ -7,57 +7,48 @@ const AnimePopover = ({ isOpen, onClose }) => {
   const favoriteAnimes = [
     {
       id: 1,
-      title: "Attack on Titan",
-      genre: "Action, Drama, Fantasy",
-      rating: "10",
-      year: "2013",
-      episodes: "104 episodes",
-      cover: "/images/aot.jpg"
+      title: "Kaiju No. 8 2nd Season",
+      genre: "Action, Sci-Fi, Military",
+      rating: "8.2",
+      year: "2025",
+      episodes: "Episode 9",
+      cover: "/images/kno8.jpg"
     },
     {
       id: 2,
-      title: "Your Name",
-      genre: "Romance, Drama, Fantasy",
-      rating: "10",
-      year: "2016",
-      episodes: "Movie",
-      cover: "/images/yourname.png"
+      title: "SAKAMOTO DAYS Cour 2",
+      genre: "Action, Comedy, Organized Crime",
+      rating: "7.2",
+      year: "2025",
+      episodes: "Episode 10",
+      cover: "/images/skd.jpg"
     },
     {
       id: 6,
-      title: "Hunter x Hunter",
-      genre: "Action, Adventure, Fantasy",
-      rating: "10",
-      year: "2011",
-      episodes: "148 episodes",
-      cover: "/images/hxh.jpg"
+      title: "Gachiakuta",
+      genre: "Action, Fantasy",
+      rating: "9",
+      year: "2025",
+      episodes: "Episode 9",
+      cover: "/images/gachi.jpg"
     },
     {
       id: 3,
-      title: "Toradora",
-      genre: "Romance, Slice of life, Comedy",
-      rating: "9",
-      year: "2001",
-      episodes: "25 episodes",
-      cover: "/images/toradora.jpg"
+      title: "Rascal Does Not Dream of Santa Claus",
+      genre: "Romance, School, Comedy",
+      rating: "8.2",
+      year: "2025",
+      episodes: "Episode 11",
+      cover: "/images/rdndsc.jpg"
     },
     {
       id: 4,
-      title: "Jujutsu Kaisen",
-      genre: "Action, School, Supernatural",
-      rating: "9",
-      year: "2020",
-      episodes: "24 episodes",
-      cover: "/images/jjk.jpg"
-    },
-    {
-      id: 5,
-      title: "Demon Slayer",
-      genre: "Action, Supernatural",
-      rating: "8",
-      year: "2019",
-      episodes: "32 episodes",
-      cover: "/images/demonslayer.jpg"
+      title: "DR. STONE SCIENCE FUTURE Cour 2",
+      genre: "Adventure, Comedy, Sci-Fi",
+      rating: "10",
+      year: "2025",
+      episodes: "Episode 10",
+      cover: "/images/drs.jpg"
     }
   ];
 
@@ -70,8 +61,8 @@ const AnimePopover = ({ isOpen, onClose }) => {
       <div className="anime-popover">
         <div className="anime-header">
           <div className="anime-header-text">
-            <h2>My Favorite Animes</h2>
-            <h6>If you're curious, heres my favorite animes :D</h6>
+            <h2>Currently Watching</h2>
+            <h6>If you're curious, here's my current watch list</h6>
           </div>
           <button className="anime-close-btn" onClick={onClose}>
             <FaTimes />
