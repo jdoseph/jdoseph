@@ -98,7 +98,7 @@ const WhatsNew = () => {
       title: "Added Italy to About Section",
       description: "Added my trip to Italy in the About section with a new episode card.",
       type: "Update",
-      date: "Sept 7, 2025",
+      date: "Sept 17, 2025",
       icon: <FaSync />,
       color: "#fff"
     }
