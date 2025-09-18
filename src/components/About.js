@@ -65,6 +65,76 @@ const About = () => {
             {/* Desktop version */}
             <div className="desktop-episode">
               <div className="episode-artwork">
+                <img src="/images/IMG_9781.JPG" alt="Episode" />
+                <button className="episode-play-btn">
+                  <a href="https://www.youtube.com/watch?v=V_HGCSg3udA" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                    <FaPlay />
+                  </a>
+                </button>
+              </div>
+              <div className="episode-content">
+                <h3 className="episode-title">Italy 2025</h3>
+                <p className="episode-description">
+                  I visited Italy with my family! I visited Rome, Florence, Assisi and Venice! 
+                  I ate lots of pasta and drank lots of wine....One memorable thing was def the 
+                  gondola ride in Venice. Such a beautiful city OMG!
+                </p>
+                <div className="episode-meta">
+                  <div className="episode-info">
+                    <span className="episode-date"> September 2025</span>
+                    <span className="episode-duration">• 1 week</span>
+                  </div>
+                  <div className="episode-actions-right">
+                    <button className="episode-action-btn play-btn-right">
+                      <a href="https://www.youtube.com/watch?v=V_HGCSg3udA" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                        <FaPlay />
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile version */}
+            <div className="mobile-episode">
+              <div className="episode-header">
+                <div className="episode-artwork">
+                  <img src="/images/IMG_9781.JPG" alt="Episode" />
+                  <button className="episode-play-btn">
+                    <a href="https://www.youtube.com/watch?v=V_HGCSg3udA" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+                <div className="episode-content">
+                <h3 className="episode-title">Italy 2025</h3>
+                </div>
+              </div>
+              <p className="episode-description">
+                  I visited Italy with my family! I visited Rome, Florence, Assisi and Venice! 
+                  I ate lots of pasta and drank lots of wine....One memorable thing was def the 
+                  gondola ride in Venice. Such a beautiful city OMG!
+                </p>
+              <div className="episode-meta">
+                <div className="episode-info">
+                  <span className="episode-date">September 2025</span>
+                  <span className="episode-duration">• 1 week</span>
+                </div>
+                <div className="episode-actions-right">
+                  <button className="episode-action-btn play-btn-right">
+                    <a href="https://www.youtube.com/watch?v=V_HGCSg3udA" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div className="episode-item">
+            {/* Desktop version */}
+            <div className="desktop-episode">
+              <div className="episode-artwork">
                 <img src="/images/pizza.png" alt="Episode" />
                 <button className="episode-play-btn">
                   <a href="https://www.youtube.com/watch?v=dwmDyCEg204" target="_blank" rel="noopener noreferrer" className="nyc-link">
