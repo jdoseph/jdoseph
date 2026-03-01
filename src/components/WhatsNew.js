@@ -101,7 +101,16 @@ const WhatsNew = () => {
       date: "Sept 17, 2025",
       icon: <FaSync />,
       color: "#fff"
-    }
+    },
+    {
+      id: 11,
+      title: "Added updates to the Experience Section and added more travel videos (currrent as of 2026)",
+      description: "updated resume & experience section & more travel videos.",
+      type: "Update",
+      date: "Feb 28, 2026",
+      icon: <FaSync />,
+      color: "#fff"
+    },
   ];
 
   return (

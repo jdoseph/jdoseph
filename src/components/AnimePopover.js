@@ -7,48 +7,21 @@ const AnimePopover = ({ isOpen, onClose }) => {
   const favoriteAnimes = [
     {
       id: 1,
-      title: "Kaiju No. 8 2nd Season",
+      title: "Jujutsu Kaisen",
       genre: "Action, Sci-Fi, Military",
       rating: "8.2",
-      year: "2025",
-      episodes: "Episode 9",
-      cover: "/images/kno8.jpg"
+      year: "2026",
+      episodes: "Episode 8",
+      cover: "/images/season-3.jpg"
     },
     {
       id: 2,
-      title: "SAKAMOTO DAYS Cour 2",
-      genre: "Action, Comedy, Organized Crime",
+      title: "Fire Force Season 3 Part 2",
+      genre: "Action, Comedy, Supernatural",
       rating: "7.2",
-      year: "2025",
+      year: "2026",
       episodes: "Episode 10",
-      cover: "/images/skd.jpg"
-    },
-    {
-      id: 6,
-      title: "Gachiakuta",
-      genre: "Action, Fantasy",
-      rating: "9",
-      year: "2025",
-      episodes: "Episode 9",
-      cover: "/images/gachi.jpg"
-    },
-    {
-      id: 3,
-      title: "Rascal Does Not Dream of Santa Claus",
-      genre: "Romance, School, Comedy",
-      rating: "8.2",
-      year: "2025",
-      episodes: "Episode 11",
-      cover: "/images/rdndsc.jpg"
-    },
-    {
-      id: 4,
-      title: "DR. STONE SCIENCE FUTURE Cour 2",
-      genre: "Adventure, Comedy, Sci-Fi",
-      rating: "10",
-      year: "2025",
-      episodes: "Episode 10",
-      cover: "/images/drs.jpg"
+      cover: "/images/fire_force.jpg"
     }
   ];
 

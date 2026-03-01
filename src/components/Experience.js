@@ -17,10 +17,30 @@ const Experience = () => {
   
   const experienceTracks = [
     {
+      company: "Charles Schwab",
+      role: "Software Engineer 1", 
+      location: "Southlake, TX",
+      duration: "Jan 2026 – Present",
+      logo: "/images/Charles_Schwab_Corporation_logo.png",
+      highlights: [
+        "developing financial planning with java and spring boot",
+      ]
+    },
+        {
+      company: "Georgia Tech",
+      role: "Masters Student in Computer Science", 
+      location: "Atlanta, GA",
+      duration: "Jan 2026 – May 2027",
+      logo: "/images/georgia_tech_logo.png",
+      highlights: [
+        "Pursuing a Master’s degree in Computer Science with a focus on HCI",
+      ]
+    },
+    {
       company: "USAF DoD",
       role: "Software Engineer", 
       location: "Robins AFB, GA",
-      duration: "July 2024 – Present",
+      duration: "July 2024 – Jan 2026",
       logo: "/images/dod.png",
       highlights: [
         "Worked under the 402d Software Directorate at the Robins AFB",
@@ -31,8 +51,18 @@ const Experience = () => {
       ]
     },
     {
+      company: "University of Georgia",
+      role: "Bachelor's Graduate in Computer Science", 
+      location: "Athens, GA",
+      duration: "Jan 2022 – May 2024",
+      logo: "/images/university_of_georgia_logo.png",
+      highlights: [
+        "Graduated with a Bachelor's degree in Computer Science",
+      ]
+    },
+    {
       company: "Georgia Southern University",
-      role: "Student Technician",
+      role: "Student Technician (IT Support Automation)",
       location: "Savannah, GA", 
       duration: "August 2020 – December 2021",
       logo: "/images/Georgia_Southern_Eagles_logo.svg.png",

@@ -16,7 +16,7 @@ const About = () => {
         </div>
 
         <div className="podcast-info">
-          <div className="podcast-type">PODCAST</div>
+          <div className="podcast-type">INTRODUCTION</div>
           <h1 className="podcast-title">The Joseph Do Experience</h1>
           <p className="podcast-description">
             Hello! I'm Joseph Do, a software engineer passionate about technology, food, traveling
@@ -58,9 +58,202 @@ const About = () => {
         <div className="episodes-header">
           <h2>Latest Episodes</h2>
         </div>
-
         <div className="episode-list">
+                   <div className="episode-item">
+            {/* Desktop version */}
+            <div className="desktop-episode">
+              <div className="episode-artwork">
+                <img src="/images/IMG_0815.jpeg" alt="Episode" />
+                <button className="episode-play-btn">
+                  <a href="https://www.youtube.com/watch?v=_2qAu3Sd-qg" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                    <FaPlay />
+                  </a>
+                </button>
+              </div>
+              <div className="episode-content">
+                <h3 className="episode-title">lisbon 2025</h3>
+                <p className="episode-description">
+                  i went to lisbon portugal with my friend michael.i was sick as fuck. we explored the city. we enjoyed lisbon.
+                </p>
+                <div className="episode-meta">
+                  <div className="episode-info">
+                    <span className="episode-date"> December 2025</span>
+                    <span className="episode-duration">• 1 Week</span>
+                  </div>
+                  <div className="episode-actions-right">
+                    <button className="episode-action-btn play-btn-right">
+                      <a href="https://www.youtube.com/watch?v=_2qAu3Sd-qg" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                        <FaPlay />
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            {/* Mobile version */}
+            <div className="mobile-episode">
+              <div className="episode-header">
+                <div className="episode-artwork">
+                  <img src="/images/IMG_0815.jpeg" alt="Episode" />
+                  <button className="episode-play-btn">
+                    <a href="https://www.youtube.com/watch?v=CsUfV_KlPB8&t" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+                <div className="episode-content">
+                <h3 className="episode-title">December 2025</h3>
+                </div>
+              </div>
+              <p className="episode-description">
+                  i went to lisbon portugal with my friend michael.i was sick as fuck. we explored the city. we enjoyed lisbon.
+                </p>
+              <div className="episode-meta">
+                <div className="episode-info">
+                  <span className="episode-date">December 2025</span>
+                  <span className="episode-duration">• 1 Week</span>
+                </div>
+                <div className="episode-actions-right">
+                  <button className="episode-action-btn play-btn-right">
+                    <a href="https://www.youtube.com/watch?v=_2qAu3Sd-qg" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+         <div className="episode-item">
+            {/* Desktop version */}
+            <div className="desktop-episode">
+              <div className="episode-artwork">
+                <img src="/images/IMG_0251.jpeg" alt="Episode" />
+                <button className="episode-play-btn">
+                  <a href="https://www.youtube.com/watch?v=CsUfV_KlPB8&t" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                    <FaPlay />
+                  </a>
+                </button>
+              </div>
+              <div className="episode-content">
+                <h3 className="episode-title">Chicago 2025</h3>
+                <p className="episode-description">
+                  i went to chicago illinois for my friends. we ate. we drank. we explored the city. we enjoyed the windy city. 
+                </p>
+                <div className="episode-meta">
+                  <div className="episode-info">
+                    <span className="episode-date"> November 2025</span>
+                    <span className="episode-duration">• 72 Hours</span>
+                  </div>
+                  <div className="episode-actions-right">
+                    <button className="episode-action-btn play-btn-right">
+                      <a href="https://www.youtube.com/watch?v=CsUfV_KlPB8&t" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                        <FaPlay />
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile version */}
+            <div className="mobile-episode">
+              <div className="episode-header">
+                <div className="episode-artwork">
+                  <img src="/images/IMG_0251.jpeg" alt="Episode" />
+                  <button className="episode-play-btn">
+                    <a href="https://www.youtube.com/watch?v=CsUfV_KlPB8&t" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+                <div className="episode-content">
+                <h3 className="episode-title">November 2025</h3>
+                </div>
+              </div>
+              <p className="episode-description">
+                  i went to chicago illinois for my friends. we ate. we drank. we explored the city. we enjoyed the windy city.
+                </p>
+              <div className="episode-meta">
+                <div className="episode-info">
+                  <span className="episode-date">November 2025</span>
+                  <span className="episode-duration">• 72 Hours</span>
+                </div>
+                <div className="episode-actions-right">
+                  <button className="episode-action-btn play-btn-right">
+                    <a href="https://www.youtube.com/watch?v=CsUfV_KlPB8&t" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="episode-item">
+            {/* Desktop version */}
+            <div className="desktop-episode">
+              <div className="episode-artwork">
+                <img src="/images/IMG_0072.jpeg" alt="Episode" />
+                <button className="episode-play-btn">
+                  <a href="https://www.youtube.com/watch?v=FNVkawNDIVo" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                    <FaPlay />
+                  </a>
+                </button>
+              </div>
+              <div className="episode-content">
+                <h3 className="episode-title">Asheville 2025</h3>
+                <p className="episode-description">
+                  i went to asheville north carolina with my friends. we ate. we hiked. we enjoyed peace. 
+                </p>
+                <div className="episode-meta">
+                  <div className="episode-info">
+                    <span className="episode-date"> October 2025</span>
+                    <span className="episode-duration">• 48 Hours</span>
+                  </div>
+                  <div className="episode-actions-right">
+                    <button className="episode-action-btn play-btn-right">
+                      <a href="https://www.youtube.com/watch?v=FNVkawNDIVo" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                        <FaPlay />
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile version */}
+            <div className="mobile-episode">
+              <div className="episode-header">
+                <div className="episode-artwork">
+                  <img src="/images/IMG_0072.jpeg" alt="Episode" />
+                  <button className="episode-play-btn">
+                    <a href="https://www.youtube.com/watch?v=FNVkawNDIVo" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+                <div className="episode-content">
+                <h3 className="episode-title">October 2025</h3>
+                </div>
+              </div>
+              <p className="episode-description">
+                  i went to asheville north carolina with my friends. we ate. we hiked. we enjoyed peace. 
+                </p>
+              <div className="episode-meta">
+                <div className="episode-info">
+                  <span className="episode-date">October 2025</span>
+                  <span className="episode-duration">• 48 Hours</span>
+                </div>
+                <div className="episode-actions-right">
+                  <button className="episode-action-btn play-btn-right">
+                    <a href="https://www.youtube.com/watch?v=FNVkawNDIVo" target="_blank" rel="noopener noreferrer" className="nyc-link">
+                      <FaPlay />
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         <div className="episode-item">
             {/* Desktop version */}
             <div className="desktop-episode">
