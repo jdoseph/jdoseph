@@ -185,7 +185,7 @@ export const scrapbookMarkup = `
           </p>
           <p class="bio-text rv rv-d1">
             I graduated from UGA with a BS in CS in May 2024. Outside of code I'm an obsessive
-            traveler (14 countries and counting), a pickleball addict (3.5 DUPR, aiming for 4.0),
+            traveler (10 countries and counting), a pickleball addict (3.5 DUPR, aiming for 4.0),
             and a matcha connoisseur.
           </p>
 
