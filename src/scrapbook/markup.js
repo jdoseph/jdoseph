@@ -96,7 +96,7 @@ export const scrapbookMarkup = `
         <div class="seam hero-stitch-under"></div>
         <p class="hero-tagline">
           Software Engineer at <strong>Charles Schwab</strong> · stitching together an
-          MSCS at <strong>Georgia Tech</strong> · ex-USAF DoD · world traveler.
+          MSCS at <strong>Georgia Tech</strong> · world traveler.
         </p>
         <div class="hero-stats">
           <div class="hero-stat" style="--rot: calc(var(--tilt) * -1.4);">
@@ -159,7 +159,7 @@ export const scrapbookMarkup = `
           </div>
           <p class="about-manifesto rv rv-d1">
             I build software that <em>matters,</em> travel the world that
-            <em>inspires,</em> and play pickleball until my arms give out.
+            <em>inspires,</em> and play pickleball until my arms give out!!!
           </p>
         </div>
       </div>
@@ -178,14 +178,14 @@ export const scrapbookMarkup = `
 
         <div class="bio-block">
           <p class="bio-text rv">
-            Hey — I'm Joseph. Software Engineer at <strong>Charles Schwab</strong>, pursuing my
+            Hello! I'm Joseph. Software Engineer at <strong>Charles Schwab</strong>, pursuing my
             Master's in Computer Science at <strong>Georgia Tech</strong> (HCI focus). Before that
             I spent a year as a DoD software engineer at Robins Air Force Base, where I held a
             Secret clearance and worked on full-stack systems for national security.
           </p>
           <p class="bio-text rv rv-d1">
             I graduated from UGA with a BS in CS in May 2024. Outside of code I'm an obsessive
-            traveler (10 countries and counting), a pickleball addict (3.5 DUPR, aiming for 4.0),
+            traveler (10 countries and counting), a pickleball addict (3.75 DUPR, aiming for 4.0),
             and a matcha connoisseur.
           </p>
 
@@ -195,13 +195,56 @@ export const scrapbookMarkup = `
             <span class="bio-tag" style="--rot: calc(var(--tilt) * -0.7);">Ex-USAF DoD</span>
             <span class="bio-tag" style="--rot: calc(var(--tilt) * 1.4);">UGA Alum</span>
             <span class="bio-tag" style="--rot: calc(var(--tilt) * -1.1);">World Traveler</span>
-            <span class="bio-tag" style="--rot: calc(var(--tilt) * 0.8);">Pickleball 3.5</span>
-            <span class="bio-tag" style="--rot: calc(var(--tilt) * -1.8);">Matcha Enjoyer</span>
+            <span class="bio-tag" style="--rot: calc(var(--tilt) * 0.8);">Pickleball 3.75</span>
+            <span class="bio-tag" style="--rot: calc(var(--tilt) * -1.8);">Food Enjoyer</span>
           </div>
 
           <div class="rv">
             <p class="travels-heading">field notes &amp; adventures <span class="seam"></span></p>
             <div class="travel-grid">
+              <!-- Dallas has no video yet: swap its <div> for an <a ... href="video"> like the others. -->
+              <a class="travel-link" href="https://www.youtube.com/watch?v=m3MVuk4b0WE" target="_blank" rel="noopener noreferrer" aria-label="Watch the Yellowstone travel video">
+                <div class="polaroid" style="--rot: calc(var(--tilt) * 1.4);">
+                  <div class="tape tape--tc tape--warm"></div>
+                  <img class="slot-img" src="/images/yellowstone.jpg" alt="Yellowstone" />
+                  <div class="polaroid-caption"><span class="polaroid-place">Yellowstone</span><span class="polaroid-date">Sep 2026</span></div>
+                </div>
+              </a>
+              <a class="travel-link" href="https://www.youtube.com/watch?v=m3MVuk4b0WE&t=186s" target="_blank" rel="noopener noreferrer" aria-label="Watch the Grand Tetons travel video">
+                <div class="polaroid" style="--rot: calc(var(--tilt) * -1.8);">
+                  <div class="tape tape--tc"></div>
+                  <img class="slot-img" src="/images/grandtetons.jpg" alt="Grand Tetons" />
+                  <div class="polaroid-caption"><span class="polaroid-place">Grand Tetons</span><span class="polaroid-date">Sep 2026</span></div>
+                </div>
+              </a>
+              <div class="travel-link">
+                <div class="polaroid" style="--rot: calc(var(--tilt) * 1.2);">
+                  <div class="tape tape--tc tape--warm"></div>
+                  <img class="slot-img" src="/images/dallas.jpg" alt="Dallas, TX" />
+                  <div class="polaroid-caption"><span class="polaroid-place">Dallas, TX</span><span class="polaroid-date">2026</span></div>
+                </div>
+              </div>
+              <a class="travel-link" href="https://www.youtube.com/watch?v=t3HIKYUbysM" target="_blank" rel="noopener noreferrer" aria-label="Watch the Austin travel video">
+                <div class="polaroid" style="--rot: calc(var(--tilt) * -1.5);">
+                  <div class="tape tape--tc"></div>
+                  <img class="slot-img" src="/images/austin.jpg" alt="Austin, TX" />
+                  <div class="polaroid-caption"><span class="polaroid-place">Austin, TX</span><span class="polaroid-date">Aug 2026</span></div>
+                </div>
+              </a>
+              <a class="travel-link" href="https://www.youtube.com/watch?v=8URfd0WzHAw" target="_blank" rel="noopener noreferrer" aria-label="Watch the NYC travel video">
+                <div class="polaroid" style="--rot: calc(var(--tilt) * 2.1);">
+                  <div class="tape tape--tc tape--warm"></div>
+                  <img class="slot-img" src="/images/nyc2026.jpg" alt="New York City" />
+                  <div class="polaroid-caption"><span class="polaroid-place">NYC</span><span class="polaroid-date">Jul 2026</span></div>
+                </div>
+              </a>
+              <a class="travel-link" href="https://www.youtube.com/watch?v=h2PW_7Y_zus" target="_blank" rel="noopener noreferrer" aria-label="Watch the Atlanta travel video">
+                <div class="polaroid" style="--rot: calc(var(--tilt) * -1.1);">
+                  <div class="tape tape--tc"></div>
+                  <img class="slot-img" src="/images/atlanta.jpg" alt="Atlanta" />
+                  <div class="polaroid-caption"><span class="polaroid-place">Atlanta</span><span class="polaroid-date">Mar 2026</span></div>
+                </div>
+              </a>
               <a class="travel-link" href="https://www.youtube.com/watch?v=V_HGCSg3udA" target="_blank" rel="noopener noreferrer" aria-label="Watch the Italy travel video">
                 <div class="polaroid" style="--rot: calc(var(--tilt) * -2.2);">
                   <div class="tape tape--tc"></div>
@@ -371,10 +414,11 @@ export const scrapbookMarkup = `
             <span class="tl-expand">details</span>
             <div class="tl-details">
               <div class="tl-details-inner">
-                <p class="tl-highlight">Shipped a production event-streaming pipeline (Kafka) for near-real-time data flow to downstream consumers</p>
-                <p class="tl-highlight">Built and launched a new REST API on a multi-tenant backend, expanding it to new product lines without disrupting existing consumers</p>
-                <p class="tl-highlight">Hardened production services by standardizing logging and observability, unlocking end-to-end testing weeks ahead of upstream dependencies</p>
-                <p class="tl-highlight">Created an automated agent for team standards and workflows, plus acceptance plans for production release documentation</p>
+                <p class="tl-highlight">Developed and delivered client-facing features for a full-stack financial planning web app using Angular and Java Spring Boot</p>
+                <p class="tl-highlight">Designed and shipped a production event-streaming pipeline using Kafka, enabling near-real-time data flow from a backend service to downstream consumers</p>
+                <p class="tl-highlight">Built and launched RESTful APIs and microservices in Java Spring Boot for a multi-tenant distributed backend</p>
+                <p class="tl-highlight">Built AI-powered development workflows that automated repetitive team processes, improving engineering efficiency and consistency</p>
+                <p class="tl-highlight">Developed an automated agent that enforces team engineering standards and workflows, and authored acceptance plans that streamlined production release documentation</p>
               </div>
             </div>
           </div>
@@ -392,7 +436,7 @@ export const scrapbookMarkup = `
                 </div>
               </div>
               <div class="tl-meta">
-                <div class="tl-duration">Jan 2026 – May 2027</div>
+                <div class="tl-duration">Jan 2026 – May 2028</div>
                 <div class="tl-location">Atlanta, GA</div>
               </div>
             </div>
@@ -417,17 +461,16 @@ export const scrapbookMarkup = `
               </div>
               <div class="tl-meta">
                 <div class="tl-duration">Jul 2024 – Jan 2026</div>
-                <div class="tl-location">Robins AFB, GA</div>
+                <div class="tl-location">Warner Robins, GA</div>
               </div>
             </div>
             <span class="tl-expand">details</span>
             <div class="tl-details">
               <div class="tl-details-inner">
-                <p class="tl-highlight">Worked under the 402d Software Directorate at Robins Air Force Base</p>
-                <p class="tl-highlight">Developed full-stack web applications with Blazor and C# .NET</p>
-                <p class="tl-highlight">Architected cloud-based data infrastructure for dataset management</p>
-                <p class="tl-highlight">Improved application efficiency by 15% through optimized architecture</p>
-                <p class="tl-highlight">Produced comprehensive software documentation to DoD standards</p>
+                <p class="tl-highlight">Worked under the 402d Software Engineering Group (SWEG) at Robins Air Force Base</p>
+                <p class="tl-highlight">Designed and developed full-stack cloud applications for the USAF using React, Blazor, C#, .NET, and MongoDB, improving application efficiency by 15% and reducing technical debt</p>
+                <p class="tl-highlight">Collaborated cross-functionally with stakeholders, engineers, and product teams to align software solutions with DoD security and compliance standards</p>
+                <p class="tl-highlight">Utilized CI/CD pipelines using Docker and Kubernetes, streamlining deployment processes and enhancing system reliability</p>
               </div>
             </div>
           </div>
@@ -553,19 +596,37 @@ export const scrapbookMarkup = `
 
         <div class="project-card stitch-card felt-hover rv rv-d1" style="--rot: calc(var(--tilt) * 0.6);">
           <div class="proj-badge">private</div>
-          <img class="slot-img" src="/images/ai-running-coach.png" alt="No Image Available" />
+          <img class="slot-img" src="/images/ai-running-coach.png" alt="Fitbit Air screenshot" />
           <div class="proj-body">
-            <span class="proj-tag">LLM Agent · Health Data</span>
-            <h3 class="proj-title">AI Running Coach</h3>
-            <p class="proj-desc">Autonomous LLM agent that reasons over your biometric data to answer natural-language training questions — a multi-step Claude tool-use loop over six SQL-backed tools, fed by an OAuth Google Health pipeline, with cross-session memory and eval-driven reliability.</p>
+            <span class="proj-tag">AI Agent · Health Data</span>
+            <h3 class="proj-title">Fitbit Air</h3>
+            <p class="proj-desc">My Whoop replacement — an all-in-one AI training app replicating Whoop, Strava, and Google Health premium features for ~$5/month instead of $378/year. An autonomous Claude agent reasons across Fitbit biometrics and Strava workouts, remembers goals across sessions, and texts specific plan changes — backed by an OAuth ETL pipeline, prompt caching ($0.015/query), and a rubric-scored eval suite.</p>
             <div class="proj-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">FastAPI</span>
               <span class="tech-tag">Claude API</span>
               <span class="tech-tag">SQLite</span>
-              <span class="tech-tag">OAuth 2.0</span>
+              <span class="tech-tag">Google Health API</span>
             </div>
-            <a class="proj-link" href="#" data-private-repo data-project="AI Running Coach">Request Access ↗</a>
+            <a class="proj-link" href="#" data-private-repo data-project="Fitbit Air">Request Access ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card stitch-card felt-hover rv rv-d2" style="--rot: calc(var(--tilt) * -0.6);">
+          <div class="proj-badge">private</div>
+          <!-- placeholder: add /public/images/smart-tv-cleanup.png -->
+          <img class="slot-img" src="/images/smart-tv-cleanup.png" alt="Smart TV Cleanup App screenshot" />
+          <div class="proj-body">
+            <span class="proj-tag">Smart TV · Privacy Tooling</span>
+            <h3 class="proj-title">Smart TV Cleanup App</h3>
+            <p class="proj-desc">A lightweight Apple TV–style Java home screen that runs on budget 1 GB TVs across 466 models from 126 brands, plus Python tools that control TVs over Wi-Fi, scan for hidden tracking, and snapshot each TV before debloating — with a fail-safe launcher swap and one-command restore.</p>
+            <div class="proj-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Bash/PowerShell</span>
+              <span class="tech-tag">Claude</span>
+            </div>
+            <a class="proj-link" href="#" data-private-repo data-project="Smart TV Cleanup App">Request Access ↗</a>
           </div>
         </div>
 
